@@ -47,6 +47,7 @@ header{
 	margin-bottom: 20%;
 	animation: move-up-down 0.5s linear infinite alternate;
 }
+
 /* scratching paw animation on disc */
 @keyframes move-up-down{
 	0%{
@@ -57,12 +58,27 @@ header{
 		transform: translateY(-3px);
 	}
 }
+#musical-note{
+	height: 50px;
+	width: auto;
+	padding-left: 20%;
+	display: none;
+	animation: back-and-forth 1s linear infinite alternate;
+}
+@keyframes back-and-forth{
+	0%{
+		transform: rotateZ(0deg);
+	}
+	100%{
+		transform: rotateZ(15deg);
+	}
+}
 /* logo text */
 #logo-text{
 	display: inline-block;
 	height: auto;
 	width: 75px;
-	margin-left: -15%;
+	margin-left: -20%;
 }
 
 /* right part of header */
@@ -77,8 +93,47 @@ header{
 	height: inherit;
 	width: auto;
 	align-items: center;
+	margin-right: 2%;
 }
 #profile>img{
 	height: 50px;
 	width: auto;
+}
+
+/* changes for smaller screens */
+@media only screen and (max-width: 1000px){
+	#logo-text{
+		display: none;
+	}
+	#musical-note{
+		display: inline-block;
+		margin-left: -10%;
+	}
+	#paw{
+		margin-left: -40%;
+		margin-bottom: 10%;
+	}
+}
+@media only screen and (max-width: 700px){
+	#logo-text{
+		display: none;
+	}
+	
+	
+	#search>input{
+		width: 160px;
+	}
+}
+@media only screen and (max-width: 400px){
+	#search{
+		display: none;
+	}
+}
+@media only screen and (max-width: 220px){
+	#musical-note{
+		display: none;
+	}
+	#favorites{
+		display: none;
+	}
 }

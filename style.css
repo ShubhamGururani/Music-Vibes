@@ -18,6 +18,8 @@ header{
 	align-items: center;
 	background-color: lightblue; 
 	justify-content: space-between;
+	font-size: 1.5rem;
+	color: white;
 }
 /* logo */
 #logo{
@@ -65,6 +67,7 @@ header{
 	display: none;
 	animation: back-and-forth 1s linear infinite alternate;
 }
+/* moving musical note animation only visible for smaller screens */
 @keyframes back-and-forth{
 	0%{
 		transform: rotateZ(0deg);
@@ -78,15 +81,34 @@ header{
 	display: inline-block;
 	height: auto;
 	width: 75px;
-	margin-left: -20%;
+	margin-left: -13%;
 }
 
 /* right part of header */
+#right-side-header{
+	padding-left: 5%;
+	width: 50vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
 #search{
 	display: inline-block;
 }
+#search input{
+	border-radius: 10px;
+	box-shadow: 0px 0px 2px 4px lightgrey;
+	height: 20px;
+	width: 400px;
+	border:none;
+}
 #favorites{
 	display: inline-block;
+}
+#notification img{
+	height: 20px;
+	width: auto;
+	animation: back-and-forth 0.3s linear infinite alternate;
 }
 #profile{
 	display: flex;
@@ -98,6 +120,7 @@ header{
 #profile>img{
 	height: 50px;
 	width: auto;
+	border-radius: 50%;
 }
 
 /* changes for smaller screens */
@@ -113,20 +136,21 @@ header{
 		margin-left: -40%;
 		margin-bottom: 10%;
 	}
-}
-@media only screen and (max-width: 700px){
-	#logo-text{
-		display: none;
-	}
-	
-	
-	#search>input{
-		width: 160px;
+	#search input{
+		width: 300px;
 	}
 }
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 800px){
+	#search input{
+		width: 150px;
+	}
+}
+@media only screen and (max-width: 500px){
 	#search{
 		display: none;
+	}
+	#notification{
+		padding-left: 50px;
 	}
 }
 @media only screen and (max-width: 220px){

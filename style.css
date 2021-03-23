@@ -1,7 +1,6 @@
 body {
 	margin: 0px;
 	font-family: sans-serif;
-	font-size: 30px;
 	/* following removes scrollbar from the mentioned browsers as per w3schools */
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none; /* firefox */
@@ -14,14 +13,18 @@ body::-webkit-scrollbar {
 /* header classes and vars */
 header{
 	width: 100%;
-	height: 150px;
+	height: 75px;
+	display: flex;
+	align-items: center;
+	background-color: lightblue; 
+	justify-content: space-between;
 }
 /* logo */
 #logo{
-	height: inherit;
-	width: 100px;
-	margin-left: 0.5%;
-	margin-top: 0.5%;
+	height: auto;
+	width: auto;
+	display: inline-block;
+	margin-left: 2%;
 }
 #disc{
 	height: 50px;
@@ -40,9 +43,8 @@ header{
 #paw{
 	height: 10px;
 	width: 10px;
-	position: absolute;
-	margin-left: -3.5%;
-	margin-top: 1.5%;
+	margin-left: -80%;
+	margin-bottom: 20%;
 	animation: move-up-down 0.5s linear infinite alternate;
 }
 /* scratching paw animation on disc */
@@ -54,4 +56,29 @@ header{
 	100%{
 		transform: translateY(-3px);
 	}
+}
+/* logo text */
+#logo-text{
+	display: inline-block;
+	height: auto;
+	width: 75px;
+	margin-left: -15%;
+}
+
+/* right part of header */
+#search{
+	display: inline-block;
+}
+#favorites{
+	display: inline-block;
+}
+#profile{
+	display: flex;
+	height: inherit;
+	width: auto;
+	align-items: center;
+}
+#profile>img{
+	height: 50px;
+	width: auto;
 }

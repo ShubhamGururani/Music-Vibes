@@ -152,6 +152,20 @@ header{
 }
 #card-layout-main img{
 	border-radius: 20px;
+	width: 300px;
+	height: 200px;
+	margin-top: 300px;
+	margin-bottom: -200px;
+	margin-left: -80px;
+	
+}
+#card-layout-main img:hover{
+	width: 400px;
+	height: 240px;
+	margin-top: 420px;
+	margin-bottom: -240px;
+	margin-left: -155px;
+	box-shadow: 0px 0px 3px 4px grey;
 }
 /* common classes for horizontal scrolling */
 .horizontal-scroll-wrapper{
@@ -170,11 +184,13 @@ header{
 	display: none;
 }
 .horizontal-scroll-wrapper > img{
-	width: 200px;
+	/* always intialize following values when using horizontal scroll wrapper with images*/
+	/*width: 200px;
 	height: 200px;
 	border-radius: 50%;
-	margin-top: 200px;
-	margin-bottom: -200px;
+	margin-top: 200px; keep this equal to width
+	margin-bottom: -200px; keep this in negative preferrably -1*marginTop
+	*/
 	transform: rotate(90deg);
 	transform-origin: right top;
 	text-align: center;

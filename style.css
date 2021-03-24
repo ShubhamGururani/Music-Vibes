@@ -108,6 +108,8 @@ header{
 #notification img{
 	height: 20px;
 	width: auto;
+}
+#notification img:hover{
 	animation: back-and-forth 0.3s linear infinite alternate;
 }
 #profile{
@@ -123,8 +125,63 @@ header{
 	border-radius: 50%;
 }
 
+
+
+/* header part complete till here */
+/* main content */
+#content{
+	width: 75vw;
+	background-color: lightgrey;
+	padding-top: 20px;
+	display: inline-block;
+	height: 100vh;
+}
+
+#card-wrapper{
+	background-color: blue;
+	width:90%;
+	height: 250px;
+	margin:auto;
+	
+}
+#card-layout-main{
+	width: 250px;
+	height: 700px;
+	margin-left: -220px;
+
+}
+#card-layout-main img{
+	border-radius: 20px;
+}
+/* common classes for horizontal scrolling */
+.horizontal-scroll-wrapper{
+	
+	background-color: pink;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transform: rotate(-90deg) ;
+	transform-origin: right top;
+	/*add some padding top wherever horizontal scroll wrapper is used*/
+	/*padding-top: 100px;*/
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none; /* firefox */
+}
+.horizontal-scroll-wrapper::-webkit-scrollbar{
+	display: none;
+}
+.horizontal-scroll-wrapper > img{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	margin-top: 200px;
+	margin-bottom: -200px;
+	transform: rotate(90deg);
+	transform-origin: right top;
+	text-align: center;
+}
+
 /* changes for smaller screens */
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1024px){
 	#logo-text{
 		display: none;
 	}
@@ -139,18 +196,32 @@ header{
 	#search input{
 		width: 300px;
 	}
+	#card-layout-main{
+		height: 550px ;
+	}
 }
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 824px){
 	#search input{
 		width: 150px;
 	}
+	#card-layout-main{
+		height: 400px; 
+	}
 }
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 600px){
 	#search{
 		display: none;
 	}
 	#notification{
 		padding-left: 50px;
+	}
+	#card-layout-main{
+		height: 250px; 
+	}
+}
+@media only screen and (max-width: 400px){
+	#card-layout-main{
+		height: 200px; 
 	}
 }
 @media only screen and (max-width: 220px){

@@ -159,6 +159,7 @@ header{
 	margin-left: -80px;
 	
 }
+/*zoom with shadow on hover */
 #card-layout-main img:hover{
 	width: 400px;
 	height: 240px;
@@ -175,7 +176,7 @@ header{
 	overflow-x: hidden;
 	transform: rotate(-90deg) ;
 	transform-origin: right top;
-	/*add some padding top wherever horizontal scroll wrapper is used*/
+	/*note: might need to add some padding top wherever horizontal scroll wrapper is used*/
 	/*padding-top: 100px;*/
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none; /* firefox */
@@ -184,7 +185,7 @@ header{
 	display: none;
 }
 .horizontal-scroll-wrapper > img{
-	/* always intialize following values when using horizontal scroll wrapper with images*/
+	/* always intialize following values when using horizontal scroll wrapper with images or just use given default values*/
 	/*width: 200px;
 	height: 200px;
 	border-radius: 50%;

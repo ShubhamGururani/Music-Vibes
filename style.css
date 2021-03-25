@@ -206,7 +206,7 @@ header{
 	display: inline;
 	float: left;
 }
-
+/*some common classes for dropdowns*/
 .dropdown{
 	float: right;
 	overflow: hidden;
@@ -251,6 +251,21 @@ header{
 
 .dropdown:hover .dropdown-content {
 	display: block;
+}
+/*songs queue */
+#songs-queue{
+	margin-top: 100px;
+}
+/*some common classes*/
+.custom-counter{
+	list-style: none;
+	counter-reset: my-counter;
+}
+.custom-counter li{
+	counter-increment: my-counter;
+}
+.custom-counter li::before{
+	content: counter(my-counter) " ";
 }
 
 /* end of queue section */

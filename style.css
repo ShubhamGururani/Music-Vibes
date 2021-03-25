@@ -253,8 +253,9 @@ header{
 	display: block;
 }
 /*songs queue */
-#songs-queue{
+#songs-queue-wrapper{
 	margin-top: 100px;
+	margin-left: -35px;
 }
 /*some common classes*/
 .custom-counter{
@@ -286,6 +287,30 @@ header{
 .bar-three{
 	animation: grow-shrink 1.1s linear infinite alternate;
 }
+/*song image*/
+.song-in-queue{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.song-in-queue img{
+	width: 75px;
+	height: 75px;
+}
+.song-info-container{
+	display: inline-block;
+	height: 75px;
+	width: 150px;
+	overflow: hidden;
+}
+.song-info-container h4{
+	display: inline;
+}
+.song-info-container p{
+	display: inline;
+}
+
 @keyframes grow-shrink{
 	0%{
 		height: 20px;

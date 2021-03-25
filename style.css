@@ -125,8 +125,6 @@ header{
 	border-radius: 50%;
 }
 
-
-
 /* header part complete till here */
 /* main content */
 #content{
@@ -135,6 +133,7 @@ header{
 	padding-top: 20px;
 	display: inline-block;
 	height: 100vh;
+	float: left;
 }
 
 #card-wrapper{
@@ -195,6 +194,13 @@ header{
 	transform: rotate(90deg);
 	transform-origin: right top;
 	text-align: center;
+}
+/*start of queue section */
+#queue{
+	width: 25vw;
+	background-color: orange;
+	float: left;
+	height: 100vh;
 }
 
 /* changes for smaller screens */

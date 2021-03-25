@@ -267,7 +267,39 @@ header{
 .custom-counter li::before{
 	content: counter(my-counter) " ";
 }
-
+/*song playing bar*/
+.bar-wrapper{
+	display: inline-block;
+}
+.bar{
+	display: inline-block;
+	width: 5px;
+	background-color: black;
+	position: relative;
+}
+.bar-one{
+	animation: grow-shrink 0.5s linear infinite alternate;
+}
+.bar-two{
+	animation: grow-shrink 0.7s linear infinite alternate;
+}
+.bar-three{
+	animation: grow-shrink 1.1s linear infinite alternate;
+}
+@keyframes grow-shrink{
+	0%{
+		height: 20px;
+		margin-top: 0px;
+	}
+	50%{
+		margin-top: 10px;
+		height: 10px;
+	}
+	100%{
+		margin-top:0px;
+		height: 20px;
+	}
+}
 /* end of queue section */
 /* changes for smaller screens */
 @media only screen and (max-width: 1024px){

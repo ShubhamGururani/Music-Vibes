@@ -137,7 +137,6 @@ main{
 	background-color: lightgrey;
 	padding-top: 20px;
 	display: inline-block;
-	height: 100vh;
 	float: left;
 }
 
@@ -205,7 +204,7 @@ main{
 #latest-releases-wrapper{
 	margin-left:5%;
 	width: 90%;
-	height: 300px;
+	height: 350px;
 	background-color: violet;
 }
 #latest-releases{
@@ -213,7 +212,7 @@ main{
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 10px;
 	width: 100%;
-	height: 100%;
+	height: 300px;
 	background: blue;
 	overflow-y: scroll;
 	overflow-x: hidden;
@@ -238,6 +237,43 @@ main{
 }
 
 /* end of latest releases section */
+
+/* start of popular artists section */
+#popular-artists-wrapper{
+	margin-top: 10px;
+	width: 90%;
+	margin-left: 5%;
+	background-color: purple;
+	height: 200px;
+}
+#popular-artists{
+	background-color: red;
+	height: 150px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 10px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.artist{
+	background-color: orange;
+	height: 150px;
+}
+.artist img{
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	margin-left: 30px;
+	margin-top: 10px;
+}
+.artist p{
+	text-align: center;
+}
+
+
+
+/*end of popular artists section */
 /*start of queue section */
 #queue{
 	width: 25vw;
@@ -377,6 +413,12 @@ main{
 /* end of queue section */
 /* changes for smaller screens */
 @media only screen and (max-width: 1024px){
+	#popular-artists{
+		grid-template-columns: repeat(4, 1fr);
+	}
+	.artist img{
+		margin-left: 20px;
+	}
 	#logo-text{
 		display: none;
 	}
@@ -403,6 +445,9 @@ main{
 	}
 }
 @media only screen and (max-width: 824px){
+	#popular-artists{
+		grid-template-columns: repeat(3, 1fr);
+	}
 	#latest-releases{
 		grid-template-columns: repeat(1, 1fr);
 	}
@@ -424,6 +469,9 @@ main{
 	}
 }
 @media only screen and (max-width: 600px){
+	#popular-artists{
+		grid-template-columns: repeat(2, 1fr);
+	}
 	#search{
 		display: none;
 	}
@@ -435,6 +483,9 @@ main{
 	}
 }
 @media only screen and (max-width: 400px){
+	.artist img{
+		margin-left: 10px;
+	}
 	#card-layout-main{
 		height: 200px; 
 	}

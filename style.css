@@ -221,6 +221,7 @@ main{
 #latest-releases > div {
 	background: red;
 	height: 200px;
+	padding-top: 10px;
 }
 #latest-releases h2{
 	display: inline-block;
@@ -411,7 +412,24 @@ main{
 	width: 25vw;
 	background-color: orange;
 	float: left;
+	right: 0px;
 	height: 100vh;
+	position: fixed;
+	overflow-y: scroll;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none; /* firefox */
+}
+
+/* remove scrollbar form chrome */
+#queue::-webkit-scrollbar { 
+	display: none; 
+}
+
+#queue>div{
+	position: fixed;
+	background-color: red;
+	width: 25vw;
+	z-index: 3;
 }
 #queue h2{
 	display: inline;
@@ -424,6 +442,7 @@ main{
 }
 
 .dropdown .drop-button{
+	right: 0px;
 	font-size: 16px;  
 	border: none;
 	outline: none;

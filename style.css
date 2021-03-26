@@ -353,7 +353,7 @@ main{
 	display: grid;
 	grid-template-columns: repeat(6,1fr);
 	grid-gap: 10px;
-	overflow-x: scroll;
+	overflow-x: hidden;
 	overflow-y: scroll;
 }
 .latest-song{
@@ -554,6 +554,9 @@ main{
 	#stations-wrapper{
 		grid-template-columns: repeat(4,1fr);
 	}
+	.latest-songs-wrapper{
+		grid-template-columns: repeat(5,1fr);
+	}
 	#logo-text{
 		display: none;
 	}
@@ -588,6 +591,9 @@ main{
 	}
 	#latest-releases{
 		grid-template-columns: repeat(1, 1fr);
+	}
+	.latest-songs-wrapper{
+		grid-template-columns: repeat(4,1fr);
 	}
 	#stations-wrapper{
 		grid-template-columns: repeat(3,1fr);
@@ -625,6 +631,9 @@ main{
 	#card-layout-main{
 		height: 250px; 
 	}
+	.latest-songs-wrapper{
+		grid-template-columns: repeat(3,1fr);
+	}
 	#music-type-internal-wrapper{
 		height:250px;
 	}
@@ -638,6 +647,9 @@ main{
 	}
 	#card-layout-main{
 		height: 200px; 
+	}
+	.latest-songs-wrapper{
+		grid-template-columns: repeat(2,1fr);
 	}
 	#music-type-internal-wrapper{
 		height:200px;

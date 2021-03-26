@@ -200,6 +200,44 @@ main{
 	transform-origin: right top;
 	text-align: center;
 }
+
+/*start of latest releases section*/
+#latest-releases-wrapper{
+	margin-left:5%;
+	width: 90%;
+	height: 300px;
+	background-color: violet;
+}
+#latest-releases{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 10px;
+	width: 100%;
+	height: 100%;
+	background: blue;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+#latest-releases > div {
+	background: red;
+	height: 200px;
+}
+#latest-releases h2{
+	display: inline-block;
+	height: 20px;
+}
+.latest-song{
+	display: flex;
+	flex: wrap;
+	flex-direction: row;
+}
+.latest-song img{
+	width:200px;
+	height: 200px;
+}
+
+/* end of latest releases section */
 /*start of queue section */
 #queue{
 	width: 25vw;
@@ -342,6 +380,10 @@ main{
 	#logo-text{
 		display: none;
 	}
+	.latest-song img{
+		height: 150px;
+		width: 150px;
+	}
 	#musical-note{
 		display: inline-block;
 		margin-left: -10%;
@@ -361,6 +403,16 @@ main{
 	}
 }
 @media only screen and (max-width: 824px){
+	#latest-releases{
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.latest-song img{
+		height: 100px;
+		width: 100px;
+	}
+	#latest-releases > div {
+		height: 150px;
+	}
 	#search input{
 		width: 150px;
 	}

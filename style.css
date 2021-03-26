@@ -216,6 +216,13 @@ main{
 	background: blue;
 	overflow-y: scroll;
 	overflow-x: hidden;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none; /* firefox */
+}
+
+/* remove scrollbar form chrome */
+#latest-releases::-webkit-scrollbar { 
+	display: none; 
 }
 
 #latest-releases > div {
@@ -256,6 +263,13 @@ main{
 	grid-gap: 10px;
 	overflow-x: hidden;
 	overflow-y: scroll;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none; /* firefox */
+}
+
+/* remove scrollbar form chrome */
+#popular-artists::-webkit-scrollbar { 
+	display: none; 
 }
 .artist{
 	background-color: orange;
@@ -288,6 +302,13 @@ main{
 	grid-gap: 10px;
 	overflow-x: hidden;
 	overflow-y: scroll;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none; /* firefox */
+}
+
+/* remove scrollbar form chrome */
+#stations-wrapper::-webkit-scrollbar { 
+	display: none; 
 }
 .station{
 	background-color: blue;
@@ -356,6 +377,13 @@ main{
 	grid-gap: 10px;
 	overflow-x: hidden;
 	overflow-y: scroll;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none; /* firefox */
+}
+
+/* remove scrollbar form chrome */
+.latest-songs-wrapper::-webkit-scrollbar { 
+	display: none; 
 }
 .latest-song{
 	background-color: red;
@@ -381,6 +409,7 @@ main{
 	margin-left: 5%;
 	margin-top: 20px;
 	width: 90%;
+	margin-bottom: 150px;
 }
 /* latest hindi end*/
 
@@ -391,7 +420,7 @@ main{
 	top: 16%;
 	left: 73%;
 	border: 1px dashed #0096fa6b;
-	height: 100%;
+	height: 210%;
 	color: #433E3F;
 }
 #scroll-simulator .scroll-traveller {
@@ -413,7 +442,7 @@ main{
 	background-color: orange;
 	float: left;
 	right: 0px;
-	height: 100vh;
+	height: 90vh;
 	position: fixed;
 	overflow-y: scroll;
 	-ms-overflow-style: none;  /* IE and Edge */

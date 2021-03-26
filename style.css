@@ -274,6 +274,33 @@ main{
 
 
 /*end of popular artists section */
+
+/*start of stations section*/
+#stations-wrapper{
+	height: 100px;
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 10px;
+	background-color: grey;
+	display: grid;
+	grid-template-columns: repeat(5,1fr);
+	grid-gap: 10px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.station{
+	background-color: blue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.station>img{
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+}
+
+/*end of stations section*/
 /*start of queue section */
 #queue{
 	width: 25vw;
@@ -419,6 +446,9 @@ main{
 	.artist img{
 		margin-left: 20px;
 	}
+	#stations-wrapper{
+		grid-template-columns: repeat(4,1fr);
+	}
 	#logo-text{
 		display: none;
 	}
@@ -450,6 +480,9 @@ main{
 	}
 	#latest-releases{
 		grid-template-columns: repeat(1, 1fr);
+	}
+	#stations-wrapper{
+		grid-template-columns: repeat(3,1fr);
 	}
 	.latest-song img{
 		height: 100px;
@@ -485,6 +518,9 @@ main{
 @media only screen and (max-width: 400px){
 	.artist img{
 		margin-left: 10px;
+	}
+	#stations-wrapper{
+		grid-template-columns: repeat(2,1fr);
 	}
 	#card-layout-main{
 		height: 200px; 

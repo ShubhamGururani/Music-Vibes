@@ -295,12 +295,60 @@ main{
 	align-items: center;
 }
 .station>img{
-	height: 80px;
-	width: 80px;
+	height: 100px;
+	width: 100px;
 	border-radius: 50%;
 }
 
 /*end of stations section*/
+/*start of music types*/
+
+#music-type-external-wrapper{
+	background-color: green;
+	width:90%;
+	height: 250px;
+	margin:auto;
+	margin-top: 10px;	
+}
+#music-type-internal-wrapper{
+	width: 250px;
+	height: 700px;
+	margin-left: -220px;
+
+}
+#music-type-internal-wrapper img{
+	transform: rotate(90deg);
+	width: 300px;
+	height: 250px;
+	margin-top: 24px;
+	margin-left: -40px;
+}
+.music-type{
+	height: 300px;
+	width: 220px;
+	overflow: hidden;
+	margin: 5px;
+}
+#music-type-internal-wrapper div:hover img{
+	width: 450px;
+	height: 400px;
+	margin-left: -60px;
+	margin-top: -40px;
+}
+
+
+/*end of music types*/
+/*latest english start*/
+#latest-english-wrapper{
+	height: 200px;
+	background-color: grey;
+	margin-left: 5%;
+	margin-top: 10px;
+	width: 90%;
+}
+
+/*latest english end*/
+
 /*scrollbar*/
 #scroll-simulator {
 	position: absolute;
@@ -493,6 +541,9 @@ main{
 	#card-layout-main{
 		height: 550px ;
 	}
+	#music-type-internal-wrapper{
+		height:550px;
+	}
 	.bar-wrapper{
 		width: 0px;
 	}
@@ -520,6 +571,9 @@ main{
 	#card-layout-main{
 		height: 400px; 
 	}
+	#music-type-internal-wrapper{
+		height:400px;
+	}
 	.song-in-queue img{
 		display: none;
 	}
@@ -537,6 +591,9 @@ main{
 	#card-layout-main{
 		height: 250px; 
 	}
+	#music-type-internal-wrapper{
+		height:250px;
+	}
 }
 @media only screen and (max-width: 400px){
 	.artist img{
@@ -547,6 +604,9 @@ main{
 	}
 	#card-layout-main{
 		height: 200px; 
+	}
+	#music-type-internal-wrapper{
+		height:200px;
 	}
 }
 @media only screen and (max-width: 220px){

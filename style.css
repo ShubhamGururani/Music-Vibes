@@ -301,6 +301,29 @@ main{
 }
 
 /*end of stations section*/
+/*scrollbar*/
+#scroll-simulator {
+	position: absolute;
+	width: 0;
+	top: 16%;
+	left: 73%;
+	border: 1px dashed #0096fa6b;
+	height: 100%;
+	color: #433E3F;
+}
+#scroll-simulator .scroll-traveller {
+	position: sticky;
+	top: 135px;
+	z-index: 2;
+}
+
+#scroll-simulator i {
+	transform: rotate(90deg);
+	margin-top: -35px;
+	display: block;
+	color: #2857a4;
+}
+/*scrollbar end*/
 /*start of queue section */
 #queue{
 	width: 25vw;

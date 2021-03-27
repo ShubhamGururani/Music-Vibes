@@ -606,9 +606,7 @@ main{
 	border:1px solid black;
 	float: left;
 }
-#player-center{
-	background-color: lightgreen;
-}
+
 #player-song-info{
 	width: 80%;
 	height: inherit;
@@ -642,6 +640,19 @@ main{
 #player-right img{
 	width: 20px;
 	height: 20px;
+}
+#player-center{
+	background-color: lightgreen;
+}
+#player-center-top{
+	width: 100%;
+	height: 70%;
+	background-color: orange;
+}
+#player-center .slidecontainer input{
+	width: 80%;
+	max-width: 400px;
+	margin-left: 10%;
 }
 /*end of player section*/
 /* changes for smaller screens */
@@ -707,6 +718,9 @@ main{
 	#player-center{
 		width: 100%;
 	}
+	#player-center .slidecontainer input{
+		margin-left: 30%;
+	}
 	#player-right{
 		width: 0px;
 		overflow:hidden;
@@ -745,6 +759,9 @@ main{
 	#card-layout-main{
 		height: 250px; 
 	}
+	#player-center .slidecontainer input{
+		margin-left: 20%;
+	}
 	.latest-songs-wrapper{
 		grid-template-columns: repeat(3,1fr);
 	}
@@ -761,6 +778,9 @@ main{
 	}
 	#card-layout-main{
 		height: 200px; 
+	}
+	#player-center .slidecontainer input{
+		margin-left: 10%;
 	}
 	.latest-songs-wrapper{
 		grid-template-columns: repeat(2,1fr);

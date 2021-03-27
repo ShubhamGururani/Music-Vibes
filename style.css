@@ -663,9 +663,16 @@ main{
 	background-color: pink;
 }
 #player-center .slidecontainer input{
-	width: 80%;
-	max-width: 400px;
-	margin-left: 10%;
+	width: 60%;
+	max-width: 500px;
+}
+#player-center .slidecontainer{
+	display: flex;
+	justify-content: space-around;
+}
+#player-center .slidecontainer p{
+	margin: 0px;
+	display: inline;
 }
 /*end of player section*/
 /* changes for smaller screens */

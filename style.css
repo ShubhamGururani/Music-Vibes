@@ -442,7 +442,7 @@ main{
 	background-color: orange;
 	float: left;
 	right: 0px;
-	height: 90vh;
+	height: 77vh;
 	position: fixed;
 	overflow-y: scroll;
 	-ms-overflow-style: none;  /* IE and Edge */
@@ -591,6 +591,17 @@ main{
 	}
 }
 /* end of queue section */
+/*start of player section*/
+#player{
+	width: 100%;
+	height: 75px;
+	position: fixed;
+	background-color: blue;
+	display: block;
+	bottom: 0px;
+}
+
+/*end of player section*/
 /* changes for smaller screens */
 @media only screen and (max-width: 1024px){
 	#popular-artists{

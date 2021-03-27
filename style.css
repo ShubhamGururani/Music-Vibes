@@ -609,6 +609,31 @@ main{
 #player-center{
 	background-color: lightgreen;
 }
+#player-song-info{
+	width: 80%;
+	height: inherit;
+	background-color: pink;
+	float: left;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: hidden;
+}
+#player-song-info img{
+	height: inherit;
+	width: 100px;
+}
+#player-song-info table{
+	height: inherit;
+	overflow: hidden;
+}
+#player-song-info p,#player-song-info h4{
+	margin: 0px;
+}
+#player-left{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
 /*end of player section*/
 /* changes for smaller screens */
 @media only screen and (max-width: 1024px){

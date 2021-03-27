@@ -1,9 +1,20 @@
+:root {
+	--headerColor:#12232e;
+	--mainColor: #007cc7;
+	--textColor: #eefbfb;
+	--playerColor:#203647;
+	--queueColor:#4da8da;
+}
+
 body {
 	margin: 0px;
 	font-family: sans-serif;
 	/* following removes scrollbar from the mentioned browsers as per w3schools */
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none; /* firefox */
+	background-color: var(--mainColor);
+	color: var(--textColor);
+
 }
 /* remove scrollbar form chrome */
 body::-webkit-scrollbar { 
@@ -18,10 +29,10 @@ header{
 	height: 75px;
 	display: flex;
 	align-items: center;
-	background-color: lightblue; 
+	background-color: var(--headerColor) ; 
 	justify-content: space-between;
 	font-size: 1.5rem;
-	color: white;
+	color: var(--textColor);
 }
 /* logo */
 #logo{
@@ -134,14 +145,13 @@ main{
 }
 #content{
 	width: 75vw;
-	background-color: lightgrey;
 	padding-top: 20px;
 	display: inline-block;
 	float: left;
 }
 
 #card-wrapper{
-	background-color: blue;
+	
 	width:90%;
 	height: 250px;
 	margin:auto;
@@ -174,7 +184,7 @@ main{
 /* common classes for horizontal scrolling */
 .horizontal-scroll-wrapper{
 	
-	background-color: pink;
+	
 	overflow-y: auto;
 	overflow-x: hidden;
 	transform: rotate(-90deg) ;
@@ -205,7 +215,7 @@ main{
 	margin-left:5%;
 	width: 90%;
 	height: 350px;
-	background-color: violet;
+	
 }
 #latest-releases{
 	display: grid;
@@ -213,7 +223,7 @@ main{
 	grid-gap: 10px;
 	width: 100%;
 	height: 300px;
-	background: blue;
+	
 	overflow-y: scroll;
 	overflow-x: hidden;
 	-ms-overflow-style: none;  /* IE and Edge */
@@ -226,7 +236,7 @@ main{
 }
 
 #latest-releases > div {
-	background: red;
+	
 	height: 200px;
 	padding-top: 10px;
 }
@@ -251,11 +261,11 @@ main{
 	margin-top: 10px;
 	width: 90%;
 	margin-left: 5%;
-	background-color: purple;
+	
 	height: 200px;
 }
 #popular-artists{
-	background-color: red;
+	
 	height: 150px;
 	width: 100%;
 	display: grid;
@@ -272,7 +282,7 @@ main{
 	display: none; 
 }
 .artist{
-	background-color: orange;
+	
 	height: 150px;
 }
 .artist img{
@@ -296,7 +306,7 @@ main{
 	width: 90%;
 	margin-left: 5%;
 	margin-top: 20px;
-	background-color: grey;
+	
 	display: grid;
 	grid-template-columns: repeat(5,1fr);
 	grid-gap: 10px;
@@ -311,7 +321,7 @@ main{
 	display: none; 
 }
 .station{
-	background-color: blue;
+	
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -326,7 +336,7 @@ main{
 /*start of music types*/
 
 #music-type-external-wrapper{
-	background-color: green;
+	
 	width:90%;
 	height: 250px;
 	margin:auto;
@@ -363,7 +373,7 @@ main{
 /*latest english start*/
 #latest-english-wrapper{
 	height: 280px;
-	background-color: grey;
+	
 	margin-left: 5%;
 	margin-top: 20px;
 	width: 90%;
@@ -371,7 +381,6 @@ main{
 }
 .latest-songs-wrapper{
 	height: 230px;
-	background-color: orange;
 	display: grid;
 	grid-template-columns: repeat(6,1fr);
 	grid-gap: 10px;
@@ -386,7 +395,6 @@ main{
 	display: none; 
 }
 .latest-song{
-	background-color: red;
 	height: 220px;
 	overflow: hidden;
 }
@@ -405,7 +413,6 @@ main{
 /* latest hindi start*/
 #latest-hindi-wrapper{
 	height: 200px;
-	background-color: pink;
 	margin-left: 5%;
 	margin-top: 20px;
 	width: 90%;
@@ -439,8 +446,8 @@ main{
 /*start of queue section */
 #queue{
 	width: 25vw;
-	background-color: orange;
 	float: left;
+	background-color: var(--queueColor);
 	right: 0px;
 	height: 77vh;
 	position: fixed;
@@ -456,9 +463,9 @@ main{
 
 #queue>div{
 	position: fixed;
-	background-color: red;
 	width: 25vw;
 	z-index: 3;
+	background-color: var(--queueColor);
 }
 #queue h2{
 	display: inline;
@@ -476,20 +483,20 @@ main{
 	border: none;
 	outline: none;
 	color: white;
+	background-color: var(--queueColor);
 	padding: 14px 16px;
-	background-color: inherit;
 	font-family: inherit;
 	margin: 0;
 }
 .dropdown:hover .drop-button{
-	background-color: red;
+	background-color: var(--playerColor);
 }
 
 .dropdown-content{
 	display: none;
 	position: absolute;
 	margin-left: -100px;
-	background-color: #f9f9f9;
+	background-color: var(--playerColor);
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
@@ -497,7 +504,7 @@ main{
 
 .dropdown-content a{
 	float: none;
-	color: black;
+	color: var(--textColor);
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
@@ -505,7 +512,7 @@ main{
 }
 
 .dropdown-content a:hover{
-	background-color: #ddd;
+	background-color: var(--mainColor);
 }
 
 .dropdown:hover .dropdown-content {
@@ -596,21 +603,19 @@ main{
 	width: 100%;
 	height: 75px;
 	position: fixed;
-	background-color: blue;
+	background-color: var(--playerColor);
 	display: block;
 	bottom: 0px;
 }
 .equal-width{
 	height: inherit;
 	width: 33%;
-	border:1px solid black;
 	float: left;
 }
 
 #player-song-info{
 	width: 80%;
 	height: inherit;
-	background-color: pink;
 	float: left;
 	display: flex;
 	flex-wrap: nowrap;
@@ -642,12 +647,12 @@ main{
 	height: 20px;
 }
 #player-center{
-	background-color: lightgreen;
+	
 }
 #player-center-top{
 	width: 100%;
 	height: 70%;
-	background-color: orange;
+	
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
@@ -660,7 +665,7 @@ main{
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	background-color: pink;
+	
 }
 #player-center .slidecontainer input{
 	width: 60%;

@@ -648,6 +648,19 @@ main{
 	width: 100%;
 	height: 70%;
 	background-color: orange;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+#player-center-song-info{
+	display: none;
+}
+#controls{
+	width: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: pink;
 }
 #player-center .slidecontainer input{
 	width: 80%;
@@ -718,8 +731,21 @@ main{
 	#player-center{
 		width: 100%;
 	}
-	#player-center .slidecontainer input{
-		margin-left: 30%;
+	#player-center-top{
+		flex-wrap: wrap;
+	}
+	#player-center-song-info{
+		display: block;
+		width: 100%;
+	}
+	#player-center-song-info h4{
+		margin: 0px;
+		text-align: center;
+	}
+	#player-center .slidecontainer{
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
 	}
 	#player-right{
 		width: 0px;
@@ -759,9 +785,7 @@ main{
 	#card-layout-main{
 		height: 250px; 
 	}
-	#player-center .slidecontainer input{
-		margin-left: 20%;
-	}
+	
 	.latest-songs-wrapper{
 		grid-template-columns: repeat(3,1fr);
 	}
@@ -779,9 +803,7 @@ main{
 	#card-layout-main{
 		height: 200px; 
 	}
-	#player-center .slidecontainer input{
-		margin-left: 10%;
-	}
+	
 	.latest-songs-wrapper{
 		grid-template-columns: repeat(2,1fr);
 	}

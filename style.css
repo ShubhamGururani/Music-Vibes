@@ -600,7 +600,15 @@ main{
 	display: block;
 	bottom: 0px;
 }
-
+.equal-width{
+	height: inherit;
+	width: 33%;
+	border:1px solid black;
+	float: left;
+}
+#player-center{
+	background-color: lightgreen;
+}
 /*end of player section*/
 /* changes for smaller screens */
 @media only screen and (max-width: 1024px){
@@ -656,6 +664,19 @@ main{
 	}
 	#stations-wrapper{
 		grid-template-columns: repeat(3,1fr);
+	}
+	#player-left{
+		width: 0px;
+		height: 0px;
+		overflow:hidden;
+	}
+	#player-center{
+		width: 100%;
+	}
+	#player-right{
+		width: 0px;
+		overflow:hidden;
+		height: 0px;
 	}
 	.latest-song img{
 		height: 100px;

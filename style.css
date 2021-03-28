@@ -151,17 +151,15 @@ main{
 }
 
 #card-wrapper{
-	
-	width:90%;
+	width:95%;
 	height: 250px;
-	margin:auto;
+	margin-left: 2%;
 	
 }
 #card-layout-main{
 	width: 250px;
-	height: 700px;
+	height: 910px;
 	margin-left: -220px;
-
 }
 #card-layout-main img{
 	border-radius: 20px;
@@ -222,7 +220,7 @@ main{
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 10px;
 	width: 100%;
-	height: 300px;
+	height: 220px;
 	
 	overflow-y: scroll;
 	overflow-x: hidden;
@@ -428,7 +426,7 @@ main{
 	left: 73%;
 	border: 1px dashed #0096fa6b;
 	height: 210%;
-	color: #433E3F;
+	color: var(--queueColor);
 }
 #scroll-simulator .scroll-traveller {
 	position: sticky;
@@ -440,7 +438,7 @@ main{
 	transform: rotate(90deg);
 	margin-top: -35px;
 	display: block;
-	color: #2857a4;
+	color: var(--playerColor);
 }
 /*scrollbar end*/
 /*start of queue section */
@@ -544,7 +542,7 @@ main{
 .bar{
 	display: inline-block;
 	width: 5px;
-	background-color: black;
+	background-color: var(--playerColor);
 	position: relative;
 }
 .bar-one{
@@ -713,7 +711,7 @@ main{
 		width: 300px;
 	}
 	#card-layout-main{
-		height: 550px ;
+		height: 605px ;
 	}
 	#music-type-internal-wrapper{
 		height:550px;
@@ -775,7 +773,7 @@ main{
 		width: 150px;
 	}
 	#card-layout-main{
-		height: 400px; 
+		height: 302px; 
 	}
 	#music-type-internal-wrapper{
 		height:400px;
@@ -795,7 +793,7 @@ main{
 		padding-left: 50px;
 	}
 	#card-layout-main{
-		height: 250px; 
+		margin-left: -240px; 
 	}
 	
 	.latest-songs-wrapper{
@@ -813,9 +811,23 @@ main{
 		grid-template-columns: repeat(2,1fr);
 	}
 	#card-layout-main{
-		height: 200px; 
+		margin-left: -260px; 
+		width: 200px;
+		height: 320px;
+	}
+	#card-layout-main img{
+		border-radius: 20px;
+		width: 250px;
+		height: 180px;
+		margin-top: 300px;
+		margin-left: -60px;
+
+	}
+	#card-wrapper{
+		height: 200px;
 	}
 	
+
 	.latest-songs-wrapper{
 		grid-template-columns: repeat(2,1fr);
 	}

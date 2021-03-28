@@ -249,43 +249,55 @@ main{
 
 /* start of popular artists section */
 #popular-artists-wrapper{
-	margin-top: 10px;
+	margin-top: 50px;
 	width: 90%;
 	margin-left: 5%;
-	
 	height: 200px;
 }
 #popular-artists{
-	
 	height: 150px;
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(7, 1fr);
 	grid-gap: 10px;
 	overflow-x: hidden;
 	overflow-y: scroll;
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none; /* firefox */
 }
-
+.artist-hover-button{
+	opacity: 0;
+	z-index: 1;
+	top: 30%;
+	position: absolute;
+}
+#popular-artists>div:hover img{
+	opacity: 0.5;
+	transition: opacity 1s;
+}
+#popular-artists>div:hover div{
+	opacity: 1;
+	transition: opacity 1s;
+}
 /* remove scrollbar form chrome */
 #popular-artists::-webkit-scrollbar { 
 	display: none; 
 }
 .artist{
-	
 	height: 150px;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
 }
 .artist img{
 	height: 100px;
 	width: 100px;
 	border-radius: 50%;
-	margin-left: 30px;
-	margin-top: 10px;
 }
-.artist p{
-	text-align: center;
-}
+
 
 
 
@@ -674,7 +686,7 @@ main{
 /* changes for smaller screens */
 @media only screen and (max-width: 1024px){
 	#popular-artists{
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(5, 1fr);
 	}
 	.artist img{
 		margin-left: 20px;
@@ -715,7 +727,7 @@ main{
 }
 @media only screen and (max-width: 824px){
 	#popular-artists{
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 	}
 	#latest-releases{
 		grid-template-columns: repeat(1, 1fr);
@@ -777,7 +789,7 @@ main{
 }
 @media only screen and (max-width: 600px){
 	#popular-artists{
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 	}
 	#search{
 		display: none;
@@ -799,6 +811,9 @@ main{
 @media only screen and (max-width: 400px){
 	.artist img{
 		margin-left: 10px;
+	}
+	#popular-artists{
+		grid-template-columns: repeat(2, 1fr);
 	}
 	#stations-wrapper{
 		grid-template-columns: repeat(2,1fr);

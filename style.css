@@ -340,15 +340,17 @@ main{
 /*start of music types*/
 
 #music-type-external-wrapper{
-	
-	width:90%;
+	width:95%;
 	height: 250px;
-	margin:auto;
-	margin-top: 20px;	
+	margin-left: 2%;
+	margin-top: 50px;	
+}
+#music-type-external-wrapper >h2{
+	margin-left: 3%;
 }
 #music-type-internal-wrapper{
 	width: 250px;
-	height: 700px;
+	height: 910px;
 	margin-left: -220px;
 
 }
@@ -365,13 +367,20 @@ main{
 	overflow: hidden;
 	margin: 5px;
 }
+.music-type h4{
+	position: relative;
+	top: -35%;
+	transform: rotate(90deg);
+}
 #music-type-internal-wrapper div:hover img{
 	width: 450px;
 	height: 400px;
 	margin-left: -60px;
 	margin-top: -40px;
 }
-
+#music-type-internal-wrapper div:hover>h4{
+	top: -64%;
+}
 
 /*end of music types*/
 /*latest english start*/
@@ -720,7 +729,7 @@ main{
 		height: 605px ;
 	}
 	#music-type-internal-wrapper{
-		height:550px;
+		height:605px;
 	}
 	.bar-wrapper{
 		width: 0px;
@@ -782,7 +791,7 @@ main{
 		height: 302px; 
 	}
 	#music-type-internal-wrapper{
-		height:400px;
+		height:302px;
 	}
 	.song-in-queue img{
 		display: none;
@@ -809,7 +818,7 @@ main{
 		grid-template-columns: repeat(3,1fr);
 	}
 	#music-type-internal-wrapper{
-		height:250px;
+		margin-left: -240px;
 	}
 }
 @media only screen and (max-width: 400px){
@@ -844,8 +853,29 @@ main{
 		grid-template-columns: repeat(2,1fr);
 	}
 	#music-type-internal-wrapper{
-		height:200px;
+		margin-left: -205px; 
+		width: 200px;
+		height: 320px;
 	}
+	
+	#music-type-internal-wrapper img{
+		width: 260px;
+		height: 200px;
+		margin-top: 24px;
+		margin-left: -40px;
+	}
+	.music-type{
+		height: 240px;
+		width: 180px;
+		overflow: hidden;
+	}
+	#music-type-internal-wrapper div:hover img{
+		width: 350px;
+		height: 300px;
+		margin-left: -60px;
+		margin-top: -40px;
+	}
+
 }
 @media only screen and (max-width: 220px){
 	#musical-note{

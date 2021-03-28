@@ -238,11 +238,19 @@ main{
 	display: inline-block;
 	height: 20px;
 }
-.latest-song{
+.latest-song-released{
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-around;
 	align-items: flex-start;
+}
+.latest-song-released img{
+	height: 150px;
+}
+.latest-song-released h4{
+	margin: 0px;
+}.latest-song-released p{
+	margin: 0px;
 }
 
 /* end of latest releases section */
@@ -386,12 +394,11 @@ main{
 /*latest english start*/
 #latest-english-wrapper{
 	height: 280px;
-	
 	margin-left: 5%;
-	margin-top: 20px;
+	margin-top: 100px;
 	width: 90%;
-	
 }
+/*the following classes are common for latest english as well as latest hindi section*/
 .latest-songs-wrapper{
 	height: 230px;
 	display: grid;
@@ -410,24 +417,29 @@ main{
 .latest-song{
 	height: 220px;
 	overflow: hidden;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
 }
 .latest-song img{
 	max-width: 100%;
 	height: 150px;
 }
 .latest-song h4{
-	margin-top: -4px;
+	margin: 0px;
 }
 .latest-song p{
-	margin-top: -16px;
+	margin: 0px;
 }
-
+/*common classes end*/
 /*latest english end*/
 /* latest hindi start*/
 #latest-hindi-wrapper{
 	height: 200px;
 	margin-left: 5%;
-	margin-top: 20px;
+	margin-top: 50px;
 	width: 90%;
 	margin-bottom: 150px;
 }

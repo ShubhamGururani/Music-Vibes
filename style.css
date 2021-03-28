@@ -243,13 +243,21 @@ main{
 	flex-wrap: nowrap;
 	justify-content: space-around;
 	align-items: flex-start;
+} 
+#latest-releases div>div>button{
+	background-color: var(--mainColor);
+}
+
+#latest-releases div>div a:hover {
+	background-color: var(--queueColor);
 }
 .latest-song-released img{
 	height: 150px;
 }
 .latest-song-released h4{
 	margin: 0px;
-}.latest-song-released p{
+}
+.latest-song-released p{
 	margin: 0px;
 }
 
@@ -472,6 +480,8 @@ main{
 #queue{
 	width: 25vw;
 	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
 	background-color: var(--queueColor);
 	right: 0px;
 	height: 77vh;
@@ -585,6 +595,7 @@ main{
 	opacity: 0;
 }
 /*song image*/
+
 .song-in-queue{
 	display: flex;
 	flex-flow: row nowrap;
@@ -832,6 +843,9 @@ main{
 	#music-type-internal-wrapper{
 		margin-left: -240px;
 	}
+	#queue h2{
+		width: 10px;
+	}
 }
 @media only screen and (max-width: 400px){
 	.artist img{
@@ -859,8 +873,13 @@ main{
 	#card-wrapper{
 		height: 200px;
 	}
-	
 
+	.song-in-queue i{
+		display: none;
+	}
+	.song-in-queue p{
+		display: none;
+	}
 	.latest-songs-wrapper{
 		grid-template-columns: repeat(2,1fr);
 	}

@@ -304,14 +304,16 @@ main{
 /*end of popular artists section */
 
 /*start of stations section*/
-#stations-wrapper{
-	height: 100px;
+#stations-external-wrapper{
 	width: 90%;
 	margin-left: 5%;
-	margin-top: 20px;
-	
+	margin-top: 50px;
+	height: 150px;
+}
+#stations-wrapper{
+	height: 100px;
 	display: grid;
-	grid-template-columns: repeat(5,1fr);
+	grid-template-columns: repeat(7,1fr);
 	grid-gap: 10px;
 	overflow-x: hidden;
 	overflow-y: scroll;
@@ -324,7 +326,6 @@ main{
 	display: none; 
 }
 .station{
-	
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -692,7 +693,7 @@ main{
 		margin-left: 20px;
 	}
 	#stations-wrapper{
-		grid-template-columns: repeat(4,1fr);
+		grid-template-columns: repeat(5,1fr);
 	}
 	.latest-songs-wrapper{
 		grid-template-columns: repeat(5,1fr);
@@ -736,7 +737,7 @@ main{
 		grid-template-columns: repeat(4,1fr);
 	}
 	#stations-wrapper{
-		grid-template-columns: repeat(3,1fr);
+		grid-template-columns: repeat(4,1fr);
 	}
 	#player-left{
 		width: 0px;
@@ -790,6 +791,9 @@ main{
 @media only screen and (max-width: 600px){
 	#popular-artists{
 		grid-template-columns: repeat(3, 1fr);
+	}
+	#stations-wrapper{
+		grid-template-columns: repeat(3,1fr);
 	}
 	#search{
 		display: none;

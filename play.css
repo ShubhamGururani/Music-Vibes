@@ -6,14 +6,7 @@
 	padding-top: 20px;
 }
 
-#recent{
-	width: 25vw;
-	height: 200px;
-	background-color: pink;
-	display: inline-block;
-	float: left;
-	padding-top: 20px;
-}
+
 #playlist-details-display{
 	margin: auto;
 	width: 85%;
@@ -96,6 +89,83 @@
 #playlist-list>ol>li>div>p,#playlist-list>ol>li>div>h4{
 	display: inline-block;
 }
+/* start of recent-and-similar section*/
+#recent-and-similar{
+	width: 25vw;
+	background-color: pink;
+	display: inline-block;
+	float: left;
+	padding-top: 20px;
+	margin-bottom: 150px;
+	overflow: hidden;
+}
+/*start of similar section*/
+#similar-artists-wrapper{
+	width: 100%;
+	background-color: yellow;
+}
+
+#similar-artists-header{
+	width: 100%;
+	background-color: blue;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.similar-artist{
+	background-color: red;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 10px;
+}
+.similar-artist h4,.similar-artist p{
+	display: inline;
+}
+.similar-artist>div{
+	display: inline;
+}
+.similar-artist img{
+	width: 100px;
+	height: 150px;
+}
+/*end of similar section*/
+/*start of recent section*/
+#recent-song-wrapper{
+	width: 100%;
+	background-color: yellow;
+	margin-top: 50px;
+}
+
+#recent-song-header{
+	width: 100%;
+	background-color: blue;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.recent-song{
+	background-color: red;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+}
+.recent-song h4,.recent-song p{
+	display: inline;
+}
+.recent-song>div{
+	display: inline;
+}
+.recent-song img{
+	width: 100px;
+	height: 150px;
+}
+/*end of recent section*/
+/*end of recent-and-similar section*/
+
 @media only screen and (max-width: 1024px){
 	.playlist-song-hover-button{
 		left: 6%;
@@ -106,7 +176,7 @@
 	#playlist-center{
 		width: 100vw;
 	}
-	#recent{
+	#recent-and-similar{
 		width: 100vw;
 	}
 	.playlist-song-hover-button{

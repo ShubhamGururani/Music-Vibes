@@ -53,11 +53,63 @@
 	height: auto;
 	display: inline-block;
 }
+#playlist-list{
+	margin-bottom: 75px;
+}
+#playlist-list ol{
+	background-color: green;
+}
+#playlist-list ol li{
+	width: 95%;
+	margin: auto;
+	background-color: blue;
+}
+#playlist-list>ol>li>div{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px;
+}
+#playlist-list ol li div img{
+	width: 100px;
+}
+
+#playlist-list>ol>li>div:hover img{
+	opacity: 0.5;
+	transition: opacity 1s;
+}
+#playlist-list>ol>li>div:hover div{
+	opacity: 1;
+	transition: opacity 1s;
+}
+#playlist-list>ol>li>div{
+	position: relative;
+}
+.playlist-song-hover-button{
+	opacity: 0;
+	z-index: 1;
+	top: 30%;
+	left: 5%;
+	position: absolute;
+}
+#playlist-list>ol>li>div>p,#playlist-list>ol>li>div>h4{
+	display: inline-block;
+}
+@media only screen and (max-width: 1024px){
+	.playlist-song-hover-button{
+		left: 6%;
+		top: 35%;
+	}
+}
 @media only screen and (max-width: 600px){
 	#playlist-center{
 		width: 100vw;
 	}
 	#recent{
 		width: 100vw;
+	}
+	.playlist-song-hover-button{
+		left: 10%;
 	}
 }

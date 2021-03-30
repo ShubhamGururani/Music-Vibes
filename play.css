@@ -1,0 +1,34 @@
+#playlist-center{
+	width: 75vw;
+	background-color: orange;
+	display: inline-block;
+	float: left;
+	padding-top: 20px;
+}
+#recent{
+	width: 25vw;
+	height: 200px;
+	background-color: pink;
+	display: inline-block;
+	float: left;
+	padding-top: 20px;
+}
+#playlist-details-display{
+	margin: auto;
+	width: 85%;
+	height: 300px;
+	background-color: blue;
+}
+#playlist-details-display img{
+	height: 100%;
+	width: 40%;
+}
+
+@media only screen and (max-width: 600px){
+	#playlist-center{
+		width: 100vw;
+	}
+	#recent{
+		width: 100vw;
+	}
+}

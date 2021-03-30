@@ -2,8 +2,86 @@
 <html>
 <head>
 	<title>Playlist Screen</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="play.css">
+	<meta name="viewport" content ="width = device-width, initial-scale = 1.0">
+	<script src="https://kit.fontawesome.com/f6ad0f96e7.js" crossorigin="anonymous"></script>
 </head>
 <body>
+	<header>
+		<div id="logo">
+			<img src="resources/cd.png" id="disc">
+			<img src="resources/pawprint.png" id="paw">
+			<img src="resources/musical-note.png" id="musical-note">
+		</div>
+		<div id="logo-text">
+			Vibing Cat Studio
+		</div>
+		<div id="favorites">
+			Favorites
+		</div>
+		<div id="right-side-header">
+			<div id="search">
+				<input type="text" name="">
+			</div>
+			<div id="notification">
+				<img src="resources/bell.png">
+			</div>
+			<div id="profile">
+				<img src="resources/cd.png">
+			</div>
+		</div>
+	</header>
+	<main>
+		
+	</main>
+	<aside>
+		
+	</aside>
+	<footer id="player">
+		<div id="player-left" class="equal-width">
+			<div id="player-song-info">
+				<img src="resources/caty-perry-asleep.jpeg">
+				<table>
+					<tr><td><h4>Scratch the mirror</h4></td></tr>
+					<tr><td><p>Whiskers in the shadow</p></td></tr>
+				</table>
+				
+				
+			</div>
+			<i class="far fa-heart"></i>
+			<i class="fas fa-ban"></i>
+		</div>
+		<div id="player-center" class="equal-width"> 
 
+			<div id="player-center-top">
+				<div id="player-center-song-info">
+					<h4>Scratch the mirror</h4>
+				</div>
+				<div id="controls">
+					<i class="fas fa-random"></i>
+					<i class="fas fa-step-backward"></i>
+					<i class="far fa-pause-circle"></i>
+					<i class="fas fa-step-forward"></i>
+					<i class="fas fa-sync"></i>
+				</div>
+			</div>
+			<div class="slidecontainer">
+				<p>1:29</p>
+				<input type="range" class="slider">
+				<p>4:44</p>
+			</div>
+		</div>
+		<div id="player-right" class="equal-width">
+			<i class="fas fa-stream"></i>
+			<img src="resources/speaker.png">
+			
+			<div class="slidecontainer">
+				<i class="fas fa-volume-up"></i>
+				<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+			</div>
+			<i class="fas fa-expand-alt"></i>
+		</div>
+	</footer>
 </body>
 </html>

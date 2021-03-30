@@ -5,6 +5,7 @@
 	float: left;
 	padding-top: 20px;
 }
+
 #recent{
 	width: 25vw;
 	height: 200px;
@@ -22,8 +23,36 @@
 #playlist-details-display img{
 	height: 100%;
 	width: 40%;
+	float: left;
+}
+#playlist-info{
+	width: 56%;
+	height: 90%;
+	background-color: lightgrey;
+	display: inline-block;
+	float: left;
+	padding: 2%;
+	overflow: hidden;
+}
+#playlist-paragraph{
+	max-height: 80px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	margin-bottom: 5px;
+
+}
+#playlist-info h2, #playlist-info p{
+	display: inline;
+}
+#follower-count{
+	float: right;
 }
 
+#playlist-button-info{
+	width: 80%;
+	height: auto;
+	display: inline-block;
+}
 @media only screen and (max-width: 600px){
 	#playlist-center{
 		width: 100vw;

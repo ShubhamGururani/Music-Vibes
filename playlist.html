@@ -9,21 +9,33 @@
 	<script src="https://kit.fontawesome.com/f6ad0f96e7.js" crossorigin="anonymous"></script>
 </head>
 <body>
+	<!-- header completely copied from original page -->
 	<header>
+		<!-- following div contains the logo of the player -->
 		<div id="logo">
 			<a href="index.html">
+				<!-- ids given to animate the following images -->
 				<img src="resources/cd.png" id="disc">
 				<img src="resources/pawprint.png" id="paw">
+				<!-- the musical note will only be visible for smaller screnns -->
 				<img src="resources/musical-note.png" id="musical-note">
 			</a>
 			
 		</div>
+		<!-- the following contains text of logo
+		it will disapper for smaller screens and its position will be taken by
+		musical note mention in the above div -->
 		<div id="logo-text">
 			Vibing Cat Studio
 		</div>
-		<div id="favorites">
-			Favorites
-		</div>
+		<!-- the following contains text. It can be made to link to a favorites page
+			but it is not required currently -->
+			<div id="favorites">
+				Favorites
+			</div>
+		<!-- this contains the right side of the header
+		it has the search bar ,the notification bell
+		and the profile image -->
 		<div id="right-side-header">
 			<div id="search">
 				<input type="text" name="">
@@ -37,16 +49,21 @@
 		</div>
 	</header>
 	<main>
+		<!-- main has two parts - playlist-center part and recent and similar part -->
 		<div id="playlist-center">
+			<!-- playlist center has two parts playlist details part and playlist list part -->
 			<div id="playlist-details-display">
+				<!-- main image of page -->
 				<img src="resources/caty-perry-asleep.jpeg">
 				<div id="playlist-info">
+					<!-- playlist info here -->
 					<div>
 						<h2>Dosa Cat</h2>
 						<p id="follower-count">326 Followers</p>
 					</div>
 					<div>
 						<h4>British Band</h4>
+						<!-- scrollable playlist parargraph -->
 						<div id="playlist-paragraph">
 							<p>
 								Cat ipsum dolor sit amet, gnaw the corn cob so weigh eight pounds but take up a full-size bed. Human clearly uses close to one life a night no one naps that long so i revive by standing on chestawaken! pet me pet me don't pet me plop down in the middle 
@@ -68,8 +85,10 @@
 			<br>
 			<br>
 			<div id="playlist-list">
+				<!-- contains a numbered list -->
 				<ol>
 					<li>
+						<!-- each item has a div for container purposes and common classes -->
 						<div>
 							<img src="resources/love-thy-enemy.jpg">
 							<div class="playlist-song-hover-button">
@@ -238,7 +257,9 @@
 			</div>
 		</div>
 		<div id="recent-and-similar">
+			<!-- has two section similar artists section and recent songs section -->
 			<div id="similar-artists-wrapper">
+				<!-- uses classes form style.css that is the main stylesheet -->
 				<div id="similar-artists-header">
 					<h3>Similar Artists</h3>
 					<div class="dropdown">
@@ -312,6 +333,7 @@
 			</div>
 			<div id="recent-song-wrapper">
 				<div id="recent-song-header">
+					<!-- also uses classes from main stylesheet -->
 					<h3>Recent Songs</h3>
 					<div class="dropdown">
 						<button class="drop-button">
@@ -374,17 +396,17 @@
 			
 		</div>
 	</main>
-
+	<!-- footer completely copied from original page -->
 	<footer id="player">
+		<!-- the player is divided into three parts the left side player the central player and the right side player All these will initially have same width For smaller screens the left and right player parts will not exist and the central part will take over the whole width of the player -->
 		<div id="player-left" class="equal-width">
+			<!-- the left side player will have the info about the song that is current playing like the song image, its name and the singgers name It will also have button to like and dislike the song -->
 			<div id="player-song-info">
 				<img src="resources/caty-perry-asleep.jpeg">
 				<table>
 					<tr><td><h4>Scratch the mirror</h4></td></tr>
 					<tr><td><p>Whiskers in the shadow</p></td></tr>
 				</table>
-				
-				
 			</div>
 			<button>
 				<i class="far fa-heart"></i>
@@ -392,11 +414,13 @@
 			<button>
 				<i class="fas fa-ban"></i>
 			</button>
-			
+
 		</div>
+		<!-- the central player will have the music progress bar and the button to go to previous song, the next song to play or pause the song -->
 		<div id="player-center" class="equal-width"> 
 
 			<div id="player-center-top">
+				<!-- the song info will only be visible on smaller screens as the left side of player will be hidden for it so it is important that we display the song name to the user -->
 				<div id="player-center-song-info">
 					<h4>Scratch the mirror</h4>
 				</div>
@@ -414,10 +438,12 @@
 				<p>4:44</p>
 			</div>
 		</div>
+		<!-- the right side of player contains the volume controls and the rest of the options like expand the music player etc this will not exist for smaller screens -->
 		<div id="player-right" class="equal-width">
+
 			<i class="fas fa-stream"></i>
 			<img src="resources/speaker.png">
-			
+
 			<div class="slidecontainer">
 				<i class="fas fa-volume-up"></i>
 				<input type="range" min="1" max="100" value="50" class="slider" id="myRange">

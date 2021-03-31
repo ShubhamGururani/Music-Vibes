@@ -599,42 +599,41 @@
 			</button>
 
 		</div>
-	</div>
-	<!-- the central player will have the music progress bar and the button to go to previous song, the next song to play or pause the song -->
-	<div id="player-center" class="equal-width"> 
+		<!-- the central player will have the music progress bar and the button to go to previous song, the next song to play or pause the song -->
+		<div id="player-center" class="equal-width"> 
 
-		<div id="player-center-top">
-			<!-- the song info will only be visible on smaller screens as the left side of player will be hidden for it so it is important that we display the song name to the user -->
-			<div id="player-center-song-info">
-				<h4>Scratch the mirror</h4>
+			<div id="player-center-top">
+				<!-- the song info will only be visible on smaller screens as the left side of player will be hidden for it so it is important that we display the song name to the user -->
+				<div id="player-center-song-info">
+					<h4>Scratch the mirror</h4>
+				</div>
+				<div id="controls">
+					<button><i class="fas fa-random"></i></button>
+					<button><i class="fas fa-step-backward"></i></button>
+					<button><i class="far fa-pause-circle"></i></button>
+					<button><i class="fas fa-step-forward"></i></button>
+					<button><i class="fas fa-sync"></i></button>
+				</div>
 			</div>
-			<div id="controls">
-				<button><i class="fas fa-random"></i></button>
-				<button><i class="fas fa-step-backward"></i></button>
-				<button><i class="far fa-pause-circle"></i></button>
-				<button><i class="fas fa-step-forward"></i></button>
-				<button><i class="fas fa-sync"></i></button>
+			<div class="slidecontainer">
+				<p>1:29</p>
+				<input type="range" class="slider">
+				<p>4:44</p>
 			</div>
 		</div>
-		<div class="slidecontainer">
-			<p>1:29</p>
-			<input type="range" class="slider">
-			<p>4:44</p>
-		</div>
-	</div>
-	<!-- the right side of player contains the volume controls and the rest of the options like expand the music player etc this will not exist for smaller screens -->
-	<div id="player-right" class="equal-width">
+		<!-- the right side of player contains the volume controls and the rest of the options like expand the music player etc this will not exist for smaller screens -->
+		<div id="player-right" class="equal-width">
 
-		<i class="fas fa-stream"></i>
-		<img src="resources/speaker.png">
+			<i class="fas fa-stream"></i>
+			<img src="resources/speaker.png">
 
-		<div class="slidecontainer">
-			<i class="fas fa-volume-up"></i>
-			<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+			<div class="slidecontainer">
+				<i class="fas fa-volume-up"></i>
+				<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+			</div>
+			<i class="fas fa-expand-alt"></i>
 		</div>
-		<i class="fas fa-expand-alt"></i>
-	</div>
-</footer>
+	</footer>
 
 </body>
 </html>

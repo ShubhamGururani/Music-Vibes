@@ -1,9 +1,9 @@
 #playlist-center{
 	width: 74vw;
-	
 	display: inline-block;
 	float: left;
 	padding-top: 20px;
+	/*the playlist center uses 74 percent of width*/
 }
 
 
@@ -14,6 +14,7 @@
 	height: 300px;
 	
 }
+/*everything stack from left in the central display*/
 #playlist-details-display img{
 	height: 100%;
 	width: 40%;
@@ -32,6 +33,7 @@
 	max-height: 80px;
 	overflow-x: hidden;
 	overflow-y: scroll;
+	/*vertically scrollable with scrollbars hidden*/
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none; /* firefox */
 	margin-bottom: 5px;
@@ -42,9 +44,11 @@
 	display: none; 
 }
 #playlist-info h2, #playlist-info p{
+	/*default margins removed*/
 	display: inline;
 }
 #follower-count{
+	/*this floats right*/
 	float: right;
 }
 
@@ -55,6 +59,7 @@
 }
 #playlist-button-info button{
 	border-radius: 10px;
+	/*button default style removed as mentioned in stack-overflow*/
 	border:none;
 	background: none;
 	color: white;
@@ -69,6 +74,7 @@
 	margin-bottom: 75px;
 }
 #playlist-list ol li div div button{
+	/*default button style removed*/
 	border:none;
 	background: none;
 	color: white;
@@ -103,6 +109,7 @@
 #playlist-list>ol>li>div:hover div{
 	opacity: 1;
 	transition: opacity 1s;
+	/*smooth opacity transition*/
 }
 #playlist-list>ol>li>div{
 	position: relative;
@@ -116,6 +123,7 @@
 }
 #playlist-list>ol>li>div>p,#playlist-list>ol>li>div>h4{
 	display: inline-block;
+	/*default margins removed*/
 }
 /* start of recent-and-similar section*/
 #recent-and-similar{
@@ -209,8 +217,8 @@
 }
 /*end of recent section*/
 /*end of recent-and-similar section*/
-
-@media only screen and (max-width: 1024px){
+/*changes for smaller screens*/
+@media only screen and (max-width: 1350px){
 	.playlist-song-hover-button{
 		left: 6%;
 		top: 35%;

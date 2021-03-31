@@ -605,6 +605,14 @@ main{
 	justify-content: space-around;
 	align-items: center;
 }
+.song-in-queue button{
+	background: none;
+	border: none;
+	color: white;
+}
+.song-in-queue button:hover{
+	color: var(--playerColor);
+}
 .song-in-queue img{
 	width: 75px;
 	height: 75px;
@@ -676,6 +684,16 @@ main{
 	justify-content: space-around;
 	align-items: center;
 }
+#player-left button {
+	background: none;
+	border:none;
+	color: white;
+	padding: 0px;
+}
+#player-left button:hover {
+	
+	color: var(--queueColor);
+}
 #player-right{
 	display: flex;
 	justify-content: space-around;
@@ -705,6 +723,15 @@ main{
 	align-items: center;
 	justify-content: space-around;
 	
+}
+#controls button {
+	border: none;
+	background: none;
+	padding: 0px;
+	color: white;
+}
+#controls button:hover{
+	color: var(--queueColor);
 }
 #player-center .slidecontainer input{
 	width: 60%;

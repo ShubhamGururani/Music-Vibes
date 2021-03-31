@@ -93,6 +93,7 @@
 }
 #playlist-list ol li div img{
 	width: 100px;
+	height: 75px;
 }
 
 #playlist-list>ol>li>div:hover img{

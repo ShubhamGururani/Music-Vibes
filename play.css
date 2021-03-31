@@ -53,11 +53,28 @@
 	height: auto;
 	display: inline-block;
 }
+#playlist-button-info button{
+	border-radius: 10px;
+	border:none;
+	background: none;
+	color: white;
+	background-color: #4da8ff;
+	height: 30px;
+	width: 70px;
+}
+#playlist-button-info button:hover{
+	background-color: #007cc7;
+}
 #playlist-list{
 	margin-bottom: 75px;
 }
-#playlist-list ol{
-	
+#playlist-list ol li div div button{
+	border:none;
+	background: none;
+	color: white;
+}
+#playlist-list ol li div div button:hover{
+	color: #203647;
 }
 #playlist-list ol li{
 	width: 95%;
@@ -102,7 +119,7 @@
 /* start of recent-and-similar section*/
 #recent-and-similar{
 	width: 25.1vw;
-	background-color: #4da8da;
+	/*background-color: #4da8da;*/
 	padding-left: 5px;
 	padding-right: 5px;
 	display: inline-block;
@@ -110,6 +127,12 @@
 	padding-top: 20px;
 	margin-bottom: 150px;
 	overflow: hidden;
+}
+#recent-and-similar div>div>button{
+	background-color: #007cc7;
+}
+#recent-and-similar div>div>button:hover{
+	color:#203647;
 }
 /*start of similar section*/
 #similar-artists-wrapper{
@@ -164,6 +187,14 @@
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 20px;
+}
+.recent-song button{
+	border:none;
+	background: none;
+	color: white;
+}
+.recent-song button:hover{
+	color: #203647;
 }
 .recent-song h4,.recent-song p{
 	display: inline;

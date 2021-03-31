@@ -4,24 +4,40 @@
 	<title>Vibes</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta name="viewport" content ="width = device-width, initial-scale = 1.0">
+	<!-- fontawesome for icons -->
 	<script src="https://kit.fontawesome.com/f6ad0f96e7.js" crossorigin="anonymous"></script>
 </head>
 <body>
+	<!-- body has three parts
+	header
+	main section 
+	footer -->
 	<header>
+		<!-- following div contains the logo of the player -->
 		<div id="logo">
 			<a href="index.html">
+				<!-- ids given to animate the following images -->
 				<img src="resources/cd.png" id="disc">
 				<img src="resources/pawprint.png" id="paw">
+				<!-- the musical note will only be visible for smaller screnns -->
 				<img src="resources/musical-note.png" id="musical-note">
 			</a>
 			
 		</div>
+		<!-- the following contains text of logo
+		it will disapper for smaller screens and its position will be taken by
+		musical note mention in the above div -->
 		<div id="logo-text">
 			Vibing Cat Studio
 		</div>
-		<div id="favorites">
-			Favorites
-		</div>
+		<!-- the following contains text. It can be made to link to a favorites page
+			but it is not required currently -->
+			<div id="favorites">
+				Favorites
+			</div>
+		<!-- this contains the right side of the header
+		it has the search bar ,the notification bell
+		and the profile image -->
 		<div id="right-side-header">
 			<div id="search">
 				<input type="text" name="">
@@ -34,10 +50,21 @@
 			</div>
 		</div>
 	</header>
+	<!-- the main section of the page starts from here.
+	this will contain the queue and the main part of the page
+	It is divided by using sections "content" and "queue" -->
 	<main>
+		<!-- the content section will take majority of the page in smaller as well as larger screens -->
 		<section id="content">
+			<!-- the following is the main card wrapper of the page -->
 			<div id="card-wrapper" >
+				<!-- this internal div is made vertical and then rotated 90 deg
+				This is done to give a horizontal scroll feel when scrolling downwards
+				with the help of css only.
+				It feels really good on non touch devices.
+				On touch devices it works but feels counter intuitive and can be improved by js later on -->
 				<div id="card-layout-main" class="horizontal-scroll-wrapper">
+					<!-- horizontal scroll wrapper is a common class and will be used for simulating other horizontal scrolls as well -->
 					<img src="resources/cold.jpg">
 					<img src="resources/all-you-need-is-cat.jpg">
 					<img src="resources/cloudy-with-a-chance.jpg">
@@ -47,12 +74,16 @@
 					<img src="resources/giphy.gif">
 				</div>
 			</div>
+			<!-- the following contains the latest released songs -->
 			<div id="latest-releases-wrapper">
 				<h2>Latest Releases</h2>
+				<!-- latest-releases is the internal wrapper for latest songs -->
 				<div id="latest-releases">
+					<!-- each div with class latest-song-released will use some common styling -->
 					<div class="latest-song-released">
 						<img src="resources/waiting-on-u.jpg">
 						<div class="latest-song-info">
+							<!-- this contains the song info -->
 							<br>
 							<h4>Thinking of You</h4>
 							<br>
@@ -61,9 +92,12 @@
 							<p>4:44</p>
 						</div>
 						<div class="dropdown">
+							<!-- this is the dropdown menu it uses a "dropdown" class which is a common class and will be used to create dropdowns wherever req -->
+							<!-- hovering over the drop-button will reveal the dropdown menu -->
 							<button class="drop-button">
 								<i class="fas fa-ellipsis-h"></i>
 							</button>
+							<!-- this is the dropdown menu -->
 							<div class="dropdown-content">
 								<a href="#"><i class="fas fa-play"></i> Play Now</a>
 								<a href="#"><i class="fas fa-plus"></i> Add to Queue</a>
@@ -72,6 +106,7 @@
 							</div>
 						</div>
 					</div>
+					<!-- same explaination for this -->
 					<div class="latest-song-released">
 						<img src="resources/work.jpg">
 						<div class="latest-song-info">
@@ -94,6 +129,7 @@
 							</div>
 						</div>
 					</div>
+					<!-- same explaination for this -->
 					<div class="latest-song-released">
 						<img src="resources/la-familia.jpg">
 						<div class="latest-song-info">
@@ -116,6 +152,7 @@
 							</div>
 						</div>
 					</div>
+					<!-- same explaination for this -->
 					<div class="latest-song-released">
 						<img src="resources/wanderlust.jpg">
 						<div class="latest-song-info">
@@ -138,19 +175,24 @@
 							</div>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
+			<!-- the following is the popular artists wrapper -->
 			<div id="popular-artists-wrapper">
 				<h2>Popular Artists</h2>
+				<!-- internal wrapper for popular artists -->
 				<div id="popular-artists">
+					<!-- each div with "artist" class will use same styling -->
 					<div class="artist">
 						<img src="resources/caty-purry.jpg">
 						<p>Caty Purry</p>
+						<!-- the following button will only be vsible when hovering over the artists image -->
 						<div class="artist-hover-button">
 							<i class="fas fa-play"></i>
 						</div>
 					</div>
+					<!-- same as above -->
 					<div class="artist">
 						<img src="resources/big-daddy.jpg">
 						<p>Big Daddy</p>
@@ -158,6 +200,7 @@
 							<i class="fas fa-play"></i>
 						</div>
 					</div>
+					<!-- same as above -->
 					<div class="artist">
 						<img src="resources/sherdil.jpg">
 						<p>Sherdil</p>
@@ -165,6 +208,7 @@
 							<i class="fas fa-play"></i>
 						</div>
 					</div>
+					<!-- same as above -->
 					<div class="artist">
 						<img src="resources/kylie-myrus.jpg">
 						<p>Kylie Myrus</p>
@@ -172,6 +216,7 @@
 							<i class="fas fa-play"></i>
 						</div>
 					</div>
+					<!-- same as above -->
 					<div class="artist">
 						<img src="resources/tommy.jpg">
 						<p>Tommy</p>
@@ -179,6 +224,7 @@
 							<i class="fas fa-play"></i>
 						</div>
 					</div>
+					<!-- same as above -->
 					<div class="artist">
 						<img src="resources/cheems.png">
 						<p>Cheems</p>
@@ -186,6 +232,7 @@
 							<i class="fas fa-play"></i>
 						</div>
 					</div>
+					<!-- same as above -->
 					<div class="artist">
 						<img src="resources/smudge.jpeg">
 						<p>Smudge</p>
@@ -193,14 +240,16 @@
 							<i class="fas fa-play"></i>
 						</div>
 					</div>
-					
-					
+
+
 				</div>
-				
+
 			</div>
+			<!-- the following contains the stations layout -->
 			<div id="stations-external-wrapper">
 				<h2>Stations</h2>
 				<div id="stations-wrapper">
+					<!-- each div with "station" class will use same styling and will contain only an image for now -->
 					<div class="station">
 						<img src="resources/station1.jpg">
 					</div>
@@ -222,18 +271,24 @@
 					<div class="station">
 						<img src="resources/station4.jpg">
 					</div>
-					
-					
-					
-
 				</div>
 			</div>
-
+			<!-- following contains the music genres -->
 			<div id="music-type-external-wrapper">
 				<h2>Genres</h2>
+					<!-- this also uses the horizontal scroll wrapper 
+					which is a class used to make a div rotate by 90 deg 
+					to simulate horizontal scroll when moving scroll vertically
+					It is a very intersting way to simulate horizontal scroll 
+					using only css.
+					It feel very intuitive in non touch displays but might feel counter intuitive in touch displays
+					It can be corrected via js later on.
+				-->
 				<div id="music-type-internal-wrapper" class="horizontal-scroll-wrapper">
+					<!-- each div with class "music-type" will use same styling -->
 					<div class="music-type">
 						<img src="resources/work.jpg">
+						<!-- the following text will be visible over the image -->
 						<h4>Work</h4>
 					</div>
 					<div class="music-type">
@@ -258,9 +313,11 @@
 					</div>
 				</div>
 			</div>
+			<!-- the following contains the latest englist songs -->
 			<div id="latest-english-wrapper">
 				<h2>Latest English</h2>
 				<div class="latest-songs-wrapper">
+					<!-- the class "latest-song" is a common class used to style latest englist as well as hindi songs -->
 					<div class="latest-song">
 						<img src="resources/caty-purry.jpg">
 						<h4>Catzilla</h4>
@@ -271,7 +328,7 @@
 						<h4>Ricky Ticky Tabby</h4>
 						<p>24th Aug 2020</p>
 					</div>
-					
+
 					<div class="latest-song">
 						<img src="resources/station2.jpg">
 						<h4>Life of Pets</h4>
@@ -292,15 +349,13 @@
 						<h4>Meowsie</h4>
 						<p>24th Aug 2020</p>
 					</div>
-					
-					
-					
-					
 				</div>
 			</div>
+			<!-- this contains the latest hindi songs-->
 			<div id="latest-hindi-wrapper">
 				<h2>Latest Hindi</h2>
 				<div class="latest-songs-wrapper">
+					<!-- "latest-song" is a common class used in englist as well as hindi songs -->
 					<div class="latest-song">
 						<img src="resources/tommy.jpg">
 						<h4>Twda Kutta Tommy</h4>
@@ -311,7 +366,7 @@
 						<h4>Sadda Kutta Kutta</h4>
 						<p>8th Dec 2020</p>
 					</div>
-					
+
 					<div class="latest-song">
 						<img src="resources/sherdil1.jpg">
 						<h4>Sher Dil</h4>
@@ -332,29 +387,37 @@
 						<h4>Hmara Hath Btana</h4>
 						<p>19th Mar 2016</p>
 					</div>
-					
-					
-					
 				</div>
 			</div>
 		</section>
+		<!-- the left section of the page ends here -->
+		<!-- queue section resides on the right side of the page always and will show the songs in queue -->
 		<section id="queue">
+			<!-- the following div contains the header for the queue -->
 			<div>
 				<h2>Queue</h2>
 				<div class="dropdown">
+					<!-- this contains the dropdown.it uses the dropdown class -->
 					<button class="drop-button">
 						<i class="fas fa-chevron-circle-down"></i>
 					</button>
 					<div class="dropdown-content">
+						<!-- this here links to the playlist page -->
 						<a href="playlist.html">Playlist</a>
 						<a href="#">Favorite Songs</a>
 					</div>
 				</div>
 			</div>
+			<!-- the following is the start of the queue of songs -->
 			<ol id="songs-queue-wrapper" class="custom-counter">
+				<!-- the list uses custom counter that can be used to style the numberings of the list as we want -->
 				<li>
 					<div class="song-in-queue">
+						<!-- each div with class "song-in-queue" uses same styling -->
+						<!-- the following is a wrapper element to show horizontal moving bars in front of the song that is being played -->
 						<div class="bar-wrapper">
+							<!-- each  bar uses two classes one is "bar" class that is used to style all bars Other is the numbered bar class. This class is used to give random time to the animation of the bar moving up and down -->
+							<!-- also note that the "bar-wrapper" div might have another class which is the "not-playing" class. This will hide the bar wrapper	and this class can be used to hide and show the moving bar wrapper with the help of javascript -->
 							<div class ="bar bar-one"></div>
 							<div class ="bar bar-two"></div>
 							<div class ="bar bar-three"></div>
@@ -368,7 +431,7 @@
 						<button>
 							<i class="far fa-heart"></i>
 						</button>
-						
+
 					</div>
 				</li>
 				<br>
@@ -509,16 +572,18 @@
 		</section>
 
 	</main>
+	<!-- the main section of the page ends here -->
+	<!-- the footer of the page contains the player section of the page This will have icons to control the functioning of the music player -->
 	<footer id="player">
+		<!-- the player is divided into three parts the left side player the central player and the right side player All these will initially have same width For smaller screens the left and right player parts will not exist and the central part will take over the whole width of the player -->
 		<div id="player-left" class="equal-width">
+			<!-- the left side player will have the info about the song that is current playing like the song image, its name and the singgers name It will also have button to like and dislike the song -->
 			<div id="player-song-info">
 				<img src="resources/caty-perry-asleep.jpeg">
 				<table>
 					<tr><td><h4>Scratch the mirror</h4></td></tr>
 					<tr><td><p>Whiskers in the shadow</p></td></tr>
 				</table>
-				
-				
 			</div>
 			<button>
 				<i class="far fa-heart"></i>
@@ -526,40 +591,44 @@
 			<button>
 				<i class="fas fa-ban"></i>
 			</button>
-			
-		</div>
-		<div id="player-center" class="equal-width"> 
 
-			<div id="player-center-top">
-				<div id="player-center-song-info">
-					<h4>Scratch the mirror</h4>
-				</div>
-				<div id="controls">
-					<button><i class="fas fa-random"></i></button>
-					<button><i class="fas fa-step-backward"></i></button>
-					<button><i class="far fa-pause-circle"></i></button>
-					<button><i class="fas fa-step-forward"></i></button>
-					<button><i class="fas fa-sync"></i></button>
-				</div>
+		</div>
+	</div>
+	<!-- the central player will have the music progress bar and the button to go to previous song, the next song to play or pause the song -->
+	<div id="player-center" class="equal-width"> 
+
+		<div id="player-center-top">
+			<!-- the song info will only be visible on smaller screens as the left side of player will be hidden for it so it is important that we display the song name to the user -->
+			<div id="player-center-song-info">
+				<h4>Scratch the mirror</h4>
 			</div>
-			<div class="slidecontainer">
-				<p>1:29</p>
-				<input type="range" class="slider">
-				<p>4:44</p>
+			<div id="controls">
+				<button><i class="fas fa-random"></i></button>
+				<button><i class="fas fa-step-backward"></i></button>
+				<button><i class="far fa-pause-circle"></i></button>
+				<button><i class="fas fa-step-forward"></i></button>
+				<button><i class="fas fa-sync"></i></button>
 			</div>
 		</div>
-		<div id="player-right" class="equal-width">
-			
-			<i class="fas fa-stream"></i>
-			<img src="resources/speaker.png">
-			
-			<div class="slidecontainer">
-				<i class="fas fa-volume-up"></i>
-				<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-			</div>
-			<i class="fas fa-expand-alt"></i>
+		<div class="slidecontainer">
+			<p>1:29</p>
+			<input type="range" class="slider">
+			<p>4:44</p>
 		</div>
-	</footer>
-	
-	</body>
-	</html>
+	</div>
+	<!-- the right side of player contains the volume controls and the rest of the options like expand the music player etc this will not exist for smaller screens -->
+	<div id="player-right" class="equal-width">
+
+		<i class="fas fa-stream"></i>
+		<img src="resources/speaker.png">
+
+		<div class="slidecontainer">
+			<i class="fas fa-volume-up"></i>
+			<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+		</div>
+		<i class="fas fa-expand-alt"></i>
+	</div>
+</footer>
+
+</body>
+</html>

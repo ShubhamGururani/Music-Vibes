@@ -4,12 +4,18 @@
 	--textColor: #eefbfb;
 	--playerColor:#203647;
 	--queueColor:#4da8da;
+	/*this defines the colors for the player
+	these variables can be used to easily change the theme of the player
+	by using java script*/
 }
 a{
+	/*since multiple a tags are used so we remove their default decoration and color
+	they will be applied as and when required*/
 	text-decoration: none;
 	color: white;
 }
 body {
+	/*the maring and font style of the body is set here*/
 	margin: 0px;
 	font-family: sans-serif;
 	/* following removes scrollbar from the mentioned browsers as per w3schools */
@@ -27,7 +33,10 @@ body::-webkit-scrollbar {
 /* header classes and vars */
 header{
 	position: fixed;
+	/*header is fixed at top even when scrolling down*/
 	z-index: 2;
+	/*the z index is increased as it needs to stay on top of multiple elements of the page
+	It is purposefully increased to 2 as some other elements also use z index 1*/
 	width: 100%;
 	height: 75px;
 	display: flex;
@@ -37,7 +46,7 @@ header{
 	font-size: 1.5rem;
 	color: var(--textColor);
 }
-/* logo */
+/* this is the styling for the logo of the page */
 #logo{
 	height: auto;
 	width: auto;
@@ -45,9 +54,11 @@ header{
 	margin-left: 2%;
 }
 #disc{
+	/*this is the disc image of the logo*/
 	height: 50px;
 	width: 50px;
 	animation: rotate 2s linear infinite normal;
+	/*this animation rotates the disc infinitely in one direction*/
 }
 /* rotating disc animation */
 @keyframes rotate{
@@ -57,13 +68,17 @@ header{
 	100%{
 		transform: rotateZ(-359deg);
 	}
+	/*note: 359 degree is used opposed to 360deg so that the infinte animation looks smooth and does not appear choppy*/
 }
 #paw{
+	/*this is the paw on the disc
+	this moves up and down which makes the disc look like it is being moved by the paw*/
 	height: 10px;
 	width: 10px;
 	margin-left: -80%;
 	margin-bottom: 20%;
 	animation: move-up-down 0.5s linear infinite alternate;
+	/*this animation moves the paw up and down infinitely*/
 }
 
 /* scratching paw animation on disc */
@@ -77,13 +92,16 @@ header{
 	}
 }
 #musical-note{
+	/*this is only visible on smaller screens*/
 	height: 50px;
 	width: auto;
 	padding-left: 20%;
 	display: none;
 	animation: back-and-forth 1s linear infinite alternate;
+	/*this animation moves the musical note back and forth to give it a look of the sound coming out of the rotating disc*/
 }
 /* moving musical note animation only visible for smaller screens */
+/*this animation is also used for the notification bell*/
 @keyframes back-and-forth{
 	0%{
 		transform: rotateZ(0deg);
@@ -94,10 +112,12 @@ header{
 }
 /* logo text */
 #logo-text{
+	/*this contains the styling for the logo text*/
 	display: inline-block;
 	height: auto;
 	width: 75px;
 	margin-left: -13%;
+	/*this logo text will disapper for smaller screens and its place will be taken by the musical note*/
 }
 
 /* right part of header */
@@ -109,6 +129,9 @@ header{
 	justify-content: space-between;
 }
 #search{
+	/*every content of the header has to be inline block
+	rather than leaving it upto the browser to decide for us
+	we force each browser to treat each element as inline block*/
 	display: inline-block;
 }
 #search input{
@@ -125,6 +148,7 @@ header{
 	height: 20px;
 	width: auto;
 }
+/*when we hover over the notification image the bell gives an animation of ringing*/
 #notification img:hover{
 	animation: back-and-forth 0.3s linear infinite alternate;
 }
@@ -139,30 +163,35 @@ header{
 	height: 50px;
 	width: auto;
 	border-radius: 50%;
+	/*profile image will appear to be circular*/
 }
 
 /* header part complete till here */
 /* main content */
 main{
 	padding-top: 75px;
+	/*padding top is given so that we separate from the header of the page and not go below  it*/
 }
 #content{
+	/*the content section will cover 75vw and the queue section will cover the rest*/
 	width: 75vw;
 	padding-top: 20px;
 	display: inline-block;
 	float: left;
+	/*it is floated left and also the queue is floated left so that they start stacking from the left*/
 }
 
 #card-wrapper{
 	width:95%;
 	height: 250px;
 	margin-left: 2%;
-	
+	/*the card wrapper will cover 95% of the content area*/
 }
 #card-layout-main{
 	width: 250px;
 	height: 910px;
 	margin-left: -220px;
+	/*this is the vertical div so its parents height is its width and parent width is its height*/
 }
 #card-layout-main img{
 	border-radius: 20px;
@@ -171,6 +200,8 @@ main{
 	margin-top: 300px;
 	margin-bottom: -200px;
 	margin-left: -80px;
+	/*this shows the dimensions of the image
+	notice that he marign bottom and margin left have to be changed so as to simulate the horizontal scroll perfectly*/
 	
 }
 /*zoom with shadow on hover */
@@ -181,17 +212,21 @@ main{
 	margin-bottom: -240px;
 	margin-left: -155px;
 	box-shadow: 0px 0px 3px 4px var(--queueColor);
+	/*on hovering the image size increases
+	we increase the images height and width
+	to counter the movement of the image we change the margins*/
 }
 /* common classes for horizontal scrolling */
 .horizontal-scroll-wrapper{
-	
-	
+	/*this is the common class used to make any vertical div horizontal*/
+	/*the overflow y is set to auto and x to hidden as the div is rotated 90deg*/
 	overflow-y: auto;
 	overflow-x: hidden;
 	transform: rotate(-90deg) ;
 	transform-origin: right top;
-	/*note: might need to add some padding top wherever horizontal scroll wrapper is used*/
+	/*note: might need to add some padding top wherever horizontal scroll wrapper is used (not necessary)*/
 	/*padding-top: 100px;*/
+	/*removing the scroll bars*/
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none; /* firefox */
 }
@@ -206,8 +241,10 @@ main{
 	margin-top: 200px; keep this equal to width
 	margin-bottom: -200px; keep this in negative preferrably -1*marginTop
 	*/
+	/*the internal parts of the horizontal scroll wrapper are also rotated 90 deg so that they appear vertical*/
 	transform: rotate(90deg);
 	transform-origin: right top;
+	/*the origin also has to be transformed so that items can be arranged properly*/
 	text-align: center;
 }
 /*end of common classes for horizontal scrolling */
@@ -219,6 +256,8 @@ main{
 	
 }
 #latest-releases{
+	/*the latest releases section uses a grid layout
+	this is scrollable vertically when it has more than four items or when the screen size is small*/
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 10px;
@@ -226,6 +265,7 @@ main{
 	height: 300px;
 	overflow-y: scroll;
 	overflow-x: hidden;
+	/*scroll bars removed so as to give cleaner look*/
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none; /* firefox */
 }
@@ -242,21 +282,26 @@ main{
 	height: 20px;
 }
 .latest-song-released{
+	/*each latest song will have display flex without wrapping so that all items are visible properly*/
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-around;
 	align-items: flex-start;
+	/*the items are algned row wise which is the default direction value for flex*/
 } 
 #latest-releases div>div>button{
 	background-color: var(--mainColor);
+	/*color overridden for latest releases 3 button menu*/
 }
 
 #latest-releases div>div a:hover {
 	background-color: var(--queueColor);
+	/*hover color overridden for latest releases menu*/
 }
 .latest-song-released img{
 	height: 150px;
 }
+/*marigns have to be removed from all h and p elements rather than leaving it upto the browser*/
 .latest-song-released h4{
 	margin: 0px;
 }
@@ -274,10 +319,14 @@ main{
 	height: 200px;
 }
 #popular-artists{
+	/*this part also uses the grid layout
+	this allows us to simulate a table without using a table element*/
 	height: 150px;
 	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
+	/*the items per row will decrease for smaller screens*/
+	/*it is also scrollable vertically and scroll bars have been removed for cleaner look*/
 	grid-gap: 10px;
 	overflow-x: hidden;
 	overflow-y: scroll;
@@ -285,12 +334,16 @@ main{
 	scrollbar-width: none; /* firefox */
 }
 .artist-hover-button{
+	/*on hovering over the artist this button will be shown. by default its opacity is 0*/
 	opacity: 0;
 	z-index: 1;
 	top: 30%;
 	position: absolute;
+	/*posistion has to be absolute so as to arrange it over the artist image*/
 }
 #popular-artists>div:hover img{
+	/*on hovering over the div the opactiy  of the image is reduced and opacity of the play icon increased*/
+	/*this change of opacity is given a transition time of 1s so that it looks smooth*/
 	opacity: 0.5;
 	transition: opacity 1s;
 }
@@ -310,6 +363,7 @@ main{
 	flex-direction: column;
 	justify-content: space-between;
 	position: relative;
+	/*each artist will have position relative so that the play icon can be arranged over it with respect to that particular artist*/
 }
 .artist img{
 	height: 100px;
@@ -332,10 +386,12 @@ main{
 #stations-wrapper{
 	height: 100px;
 	display: grid;
+	/*grid layout used again and no of columns decreases on smaller devices*/
 	grid-template-columns: repeat(7,1fr);
 	grid-gap: 10px;
 	overflow-x: hidden;
 	overflow-y: scroll;
+	/*this is also scrollable vertically and scroll bars removed for aesthetic purposes only*/
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none; /* firefox */
 }
@@ -371,9 +427,11 @@ main{
 	width: 250px;
 	height: 910px;
 	margin-left: -220px;
-
+	/*since this uses the horizontal scroll class so the left margin has to be kept in negative to align the div properly*/
 }
 #music-type-internal-wrapper img{
+	/*this internal image is rotated 90 deg because it exists inside a div and that div is not affected by the horizontal scroll bars 
+	inner image rotation*/
 	transform: rotate(90deg);
 	width: 300px;
 	height: 250px;
@@ -390,6 +448,7 @@ main{
 	position: relative;
 	top: -35%;
 	transform: rotate(90deg);
+	/*this also has to be rotated 90 deg*/
 }
 #music-type-internal-wrapper div:hover img{
 	width: 450px;
@@ -399,6 +458,7 @@ main{
 }
 #music-type-internal-wrapper div:hover>h4{
 	top: -64%;
+	/*the caption written over the image moves so its top has to be changed on hover so that it appears static*/
 }
 
 /*end of music types*/
@@ -413,6 +473,7 @@ main{
 .latest-songs-wrapper{
 	height: 230px;
 	display: grid;
+	/*grid layout with vertical scroll. Number of items reduced for smaller screens. Scroll bars removed for aesthetics*/
 	grid-template-columns: repeat(6,1fr);
 	grid-gap: 10px;
 	overflow-x: hidden;
@@ -433,6 +494,7 @@ main{
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
+	/*only place where flex direction column is used . It arranges the image and captions below it nicely*/
 }
 .latest-song img{
 	max-width: 100%;
@@ -455,8 +517,9 @@ main{
 	margin-bottom: 150px;
 }
 /* latest hindi end*/
-
-/*scrollbar*/
+/*
+This was a scroll simulator which has been removed from the latest version
+kept the code as it might come in handy later on
 #scroll-simulator {
 	position: absolute;
 	width: 0;
@@ -478,18 +541,25 @@ main{
 	display: block;
 	color: var(--playerColor);
 }
-/*scrollbar end*/
+*/
+
 /*start of queue section */
 #queue{
+	/*the queue will take only 25vw as rest is take by the content section*/
 	width: 25vw;
 	float: left;
 	padding-left: 10px;
 	padding-right: 10px;
+	/*padding left and right so that the elements inside look nice and tidy*/
 	background-color: var(--queueColor);
 	right: 0px;
 	height: 77vh;
+	/*height value given so that it covers most of the page till the footer*/
 	position: fixed;
+	/*position is fixed so that it does not move away on scrolling longer pages*/
+	/*its overflow y value is scroll so that it allows for vertical scrolling*/
 	overflow-y: scroll;
+	/*scrollbars removed for aesthetic purposes*/
 	-ms-overflow-style: none;  /* IE and Edge */
 	scrollbar-width: none; /* firefox */
 }
@@ -500,9 +570,12 @@ main{
 }
 
 #queue>div{
+	/*this fixes the header part of the queue
+	the songs nicely slide under the header*/
 	position: fixed;
 	width: 25vw;
 	z-index: 3;
+	/*z index increased so that we can have elements with lesser z index easily pass under it*/
 	background-color: var(--queueColor);
 }
 #queue h2{
@@ -513,6 +586,8 @@ main{
 .dropdown{
 	float: right;
 	overflow: hidden;
+	/*this is the common class for dropdown
+	the float right is given to it as mostly the dropdowns exists on the right side of its container element*/
 }
 
 .dropdown .drop-button{
@@ -529,7 +604,7 @@ main{
 .dropdown:hover .drop-button{
 	background-color: var(--playerColor);
 }
-
+/*default colors given to the dropdown and its elements. can be changed now by jsut changing the variables*/
 .dropdown-content{
 	display: none;
 	position: absolute;
@@ -537,6 +612,7 @@ main{
 	background-color: var(--playerColor);
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	/*z index so increased so that the menu appears over the other items*/
 	z-index: 1;
 }
 
@@ -563,6 +639,7 @@ main{
 }
 /*some common classes*/
 .custom-counter{
+	/*custom counter used so that any kind of counter can be used by the qeueu*/
 	list-style: none;
 	counter-reset: my-counter;
 }
@@ -579,21 +656,29 @@ main{
 	border-radius: 50%;
 	display: inline-grid;
 	place-items: center;
+	/*place items
+		The CSS place-items shorthand property allows you to align items along
+	 	both the block and inline directions at once (i.e. the align-items and justify-items properties)
+	  	in a relevant layout system such as Grid or Flexbox.
+	  	If the second value is not set, the first value is also used for i*/
 	line-height: 1.2em;
 }
 /*song playing bar*/
 .bar-wrapper{
+	/*this contains the moving bars*/
 	display: inline-block;
 	overflow: hidden;
 	height: 20px;
 	width: 24px;
 }
 .bar{
+	/*each bar is given same style*/
 	display: inline-block;
 	width: 5px;
 	background-color: var(--playerColor);
 	position: relative;
 }
+/*each bar given different grow-shrink time */
 .bar-one{
 	animation: grow-shrink 0.5s linear infinite alternate;
 }
@@ -604,17 +689,22 @@ main{
 	animation: grow-shrink 1.1s linear infinite alternate;
 }
 .not-playing{
+	/*the song which is not playing will have opacity of the bar wrapper as 0*/
 	opacity: 0;
 }
 /*song image*/
 
 .song-in-queue{
+	/*each song will use flex to align items row wise without wrap*/
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-around;
 	align-items: center;
 }
 .song-in-queue button{
+	/*the default styling of button has to be removed*/
+	/*solution taken from most upvoted answer from stackoverflow*/
+	/* https://stackoverflow.com/questions/11497094/remove-border-from-buttons */
 	background: none;
 	border: none;
 	color: white;
@@ -625,6 +715,7 @@ main{
 .song-in-queue img{
 	width: 75px;
 	height: 75px;
+	/*the image will be a square*/
 }
 .song-info-container{
 	display: inline-block;
@@ -634,12 +725,16 @@ main{
 }
 .song-info-container h4{
 	display: inline;
+	/*this is done to remove the extra margins from p and h4 elements*/
 }
 .song-info-container p{
 	display: inline;
 }
 
 @keyframes grow-shrink{
+	/*this animation is the one that controls the bars used in the queue*/
+	/*it increases and decreases the height of the bar and to keep it static at its place 
+	we also increase and decrease the margin top*/
 	0%{
 		height: 20px;
 		margin-top: 0px;
@@ -656,14 +751,18 @@ main{
 /* end of queue section */
 /*start of player section*/
 #player{
+	/*the player will acquire the whole widht of the screen*/
 	width: 100%;
 	height: 75px;
 	position: fixed;
+	/*it will have fixed position with distance from bottom of page as 0*/
 	background-color: var(--playerColor);
 	display: block;
 	bottom: 0px;
 }
 .equal-width{
+	/*each part of player will have this class so that they stack from left and have equal width*/
+	/*height they will inherit from the player*/
 	height: inherit;
 	width: 33%;
 	float: left;
@@ -676,10 +775,13 @@ main{
 	display: flex;
 	flex-wrap: nowrap;
 	overflow: hidden;
+	/*this will take 80% of width of the left player
+	the display will be flex to array items nicely*/
 }
 #player-song-info img{
 	height: inherit;
 	width: 100px;
+	/*width of the image is fixed and height set according to parent*/
 }
 #player-song-info table{
 	height: inherit;
@@ -687,6 +789,7 @@ main{
 }
 #player-song-info p,#player-song-info h4{
 	margin: 0px;
+	/*default margins removed from elements*/
 }
 #player-left{
 	display: flex;
@@ -696,14 +799,16 @@ main{
 #player-left button {
 	background: none;
 	border:none;
+	/*default button styles removed*/
 	color: white;
 	padding: 0px;
 }
 #player-left button:hover {
-	
+	/*color change on hover*/
 	color: var(--queueColor);
 }
 #player-right{
+	/*display flex to arrange icons*/
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -712,39 +817,42 @@ main{
 	width: 20px;
 	height: 20px;
 }
-#player-center{
-	
-}
+
 #player-center-top{
 	width: 100%;
 	height: 70%;
-	
+	/*this will contain the main controls of the player*/
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 }
 #player-center-song-info{
 	display: none;
+	/*the song info will only be visible on smaller screens*/
 }
 #controls{
 	width: 60%;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	
+	/*controls will take 60% of the central part of player*/
 }
 #controls button {
 	border: none;
 	background: none;
+	/*default style of button removed*/
 	padding: 0px;
 	color: white;
 }
 #controls button:hover{
+	/*color change on hover*/
 	color: var(--queueColor);
 }
 #player-center .slidecontainer input{
 	width: 60%;
 	max-width: 500px;
+	/*the song length bar which stretches for 60% of parent*/
+	/*max height used as a very long progress bar might not look good*/
 }
 #player-center .slidecontainer{
 	display: flex;
@@ -753,10 +861,12 @@ main{
 #player-center .slidecontainer p{
 	margin: 0px;
 	display: inline;
+	/*removed default margin and display property*/
 }
 /*end of player section*/
 /* changes for smaller screens */
 @media only screen and (max-width: 1024px){
+	/*grid sizes reduced for multiple elements*/
 	#popular-artists{
 		grid-template-columns: repeat(5, 1fr);
 	}
@@ -769,35 +879,44 @@ main{
 	.latest-songs-wrapper{
 		grid-template-columns: repeat(5,1fr);
 	}
+	/*logo text hidden*/
 	#logo-text{
 		display: none;
 	}
+	/*resizing latest song image*/
 	.latest-song img{
 		height: 150px;
 		width: 150px;
 	}
+	/*musical note visible now*/
 	#musical-note{
 		display: inline-block;
 		margin-left: -10%;
 	}
+	/*paw on logo position changed a bit*/
 	#paw{
 		margin-left: -40%;
 		margin-bottom: 10%;
 	}
+	/*search bar resized*/
 	#search input{
 		width: 300px;
 	}
+	/*card layout resized*/
 	#card-layout-main{
 		height: 605px ;
 	}
 	#music-type-internal-wrapper{
 		height:605px;
 	}
+	/*bar wrapper removed*/
 	.bar-wrapper{
 		width: 0px;
 	}
 }
+/*used screen size 824 for better control over the page mostly for ipads*/
 @media only screen and (max-width: 824px){
+	/*grid number of columns decreased everywhere*/
 	#popular-artists{
 		grid-template-columns: repeat(4, 1fr);
 	}
@@ -810,21 +929,25 @@ main{
 	#stations-wrapper{
 		grid-template-columns: repeat(4,1fr);
 	}
+	/*player left and right on the footer removed*/
 	#player-left{
 		width: 0px;
 		height: 0px;
 		overflow:hidden;
 	}
+	/*player center stretches and covers whole width*/
 	#player-center{
 		width: 100%;
 	}
 	#player-center-top{
 		flex-wrap: wrap;
 	}
+	/*player song info visible in the center as player left has been removed now*/
 	#player-center-song-info{
 		display: block;
 		width: 100%;
 	}
+	/*minor adjustments to items*/
 	#player-center-song-info h4{
 		margin: 0px;
 		text-align: center;
@@ -834,15 +957,18 @@ main{
 		align-items: center;
 		justify-content: space-around;
 	}
+	/*player right of footer is also hidden*/
 	#player-right{
 		width: 0px;
 		overflow:hidden;
 		height: 0px;
 	}
+	/*image resized to fit the screen*/
 	.latest-song img{
 		height: 100px;
 		width: 100px;
 	}
+	/*multiple resizing done to fit the screen size*/
 	#latest-releases > div {
 		height: 150px;
 	}
@@ -856,29 +982,35 @@ main{
 		height:302px;
 	}
 	.song-in-queue img{
+		/*image of song in queue removed*/
 		display: none;
 	}
 	#queue{
+		/*queue covers more height to fit ipads*/
 		height: 85%;
 	}
 }
+/*changs for screens smaller than or equal to 600 px*/
 @media only screen and (max-width: 600px){
+	/*grid columns reduced wherever used*/
 	#popular-artists{
 		grid-template-columns: repeat(3, 1fr);
 	}
 	#stations-wrapper{
 		grid-template-columns: repeat(3,1fr);
 	}
+	/*search bar gone for smaller screens*/
 	#search{
 		display: none;
 	}
+	/*other minor adjustments*/
 	#notification{
 		padding-left: 50px;
 	}
 	#card-layout-main{
 		margin-left: -240px; 
 	}
-	
+
 	.latest-songs-wrapper{
 		grid-template-columns: repeat(3,1fr);
 	}
@@ -889,16 +1021,20 @@ main{
 		width: 10px;
 	}
 }
+/*changes for mobile screens*/
 @media only screen and (max-width: 400px){
 	#logo{
 		margin-left: 4%;
 	}
+	/*favorites removed as currently it is not useful.
+	can be moved to a hamburger menu when it becomes usable*/
 	#favorites{
 		display: none;
 	}
 	.artist img{
 		margin-left: 10px;
 	}
+	/*grids resized everywhere*/
 	.latest-song-released img{
 		display: none;
 	}
@@ -908,6 +1044,7 @@ main{
 	#stations-wrapper{
 		grid-template-columns: repeat(2,1fr);
 	}
+	/*horizontal scroll resized to fit screen size*/
 	#card-layout-main{
 		margin-left: -260px; 
 		width: 200px;
@@ -921,6 +1058,7 @@ main{
 		margin-left: -60px;
 
 	}
+	/*minor changes for smaller screens*/
 	#card-wrapper{
 		height: 200px;
 	}
@@ -939,7 +1077,7 @@ main{
 		width: 200px;
 		height: 320px;
 	}
-	
+	/*changes for music types to fit the screen size*/
 	#music-type-internal-wrapper img{
 		width: 260px;
 		height: 200px;
@@ -959,9 +1097,10 @@ main{
 	}
 
 }
+/*changes for very small screens might be useful for only some users as most smaller screens now also have around 300px width */
 @media only screen and (max-width: 250px){
 	#musical-note{
 		display: none;
 	}
-	
+
 }

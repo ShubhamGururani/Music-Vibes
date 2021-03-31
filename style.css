@@ -571,6 +571,15 @@ main{
 }
 .custom-counter li::before{
 	content: counter(my-counter) " ";
+	margin-right: 0.5rem;
+	background: var(--mainColor);
+	color: white;
+	width: 1.2em;
+	height: 1.2em;
+	border-radius: 50%;
+	display: inline-grid;
+	place-items: center;
+	line-height: 1.2em;
 }
 /*song playing bar*/
 .bar-wrapper{
@@ -849,6 +858,9 @@ main{
 	.song-in-queue img{
 		display: none;
 	}
+	#queue{
+		height: 85%;
+	}
 }
 @media only screen and (max-width: 600px){
 	#popular-artists{
@@ -878,8 +890,17 @@ main{
 	}
 }
 @media only screen and (max-width: 400px){
+	#logo{
+		margin-left: 4%;
+	}
+	#favorites{
+		display: none;
+	}
 	.artist img{
 		margin-left: 10px;
+	}
+	.latest-song-released img{
+		display: none;
 	}
 	#popular-artists{
 		grid-template-columns: repeat(2, 1fr);
@@ -938,11 +959,9 @@ main{
 	}
 
 }
-@media only screen and (max-width: 220px){
+@media only screen and (max-width: 250px){
 	#musical-note{
 		display: none;
 	}
-	#favorites{
-		display: none;
-	}
+	
 }
